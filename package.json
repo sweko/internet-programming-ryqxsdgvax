@@ -1,0 +1,22 @@
+{
+  "name": "internet-programming-ryqxsdgvax",
+  "version": "1.0.0",
+  "description": "Final Exam Internet Programming 2024",
+  "main": "code/index.ts",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sweko/internet-programming-ryqxsdgvax.git"
+  },
+  "author": "Wekoslav Stefanovski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sweko/internet-programming-ryqxsdgvax/issues"
+  },
+  "homepage": "https://github.com/sweko/internet-programming-ryqxsdgvax#readme"
+}
