@@ -1,0 +1,3641 @@
+{
+    "students": [
+        {
+            "id": 1,
+            "firstName": "John",
+            "lastName": "Smith",
+            "studentId": "2023-7001",
+            "dateOfBirth": "2005-03-15",
+            "email": "john.smith@university.edu",
+            "degree": "CS",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "firstName": "Emma",
+            "lastName": "Davis",
+            "studentId": "2022-7002",
+            "dateOfBirth": "2004-07-22",
+            "email": "emma.davis@university.edu",
+            "degree": "DS",
+            "year": 2,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 95,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 94,
+                        "letter": "A"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 93,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 90,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS201",
+                    "grade": {
+                        "percentage": 96,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS303",
+                    "semester": "spring"
+                },
+                {
+                    "code": "DS202",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "firstName": "Michael",
+            "lastName": "Wilson",
+            "studentId": "2021-7003",
+            "dateOfBirth": "2003-11-30",
+            "email": "michael.wilson@university.edu",
+            "degree": "SE",
+            "year": 3,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 82,
+                        "letter": "B-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 86,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 84,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "SE201",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "SE202",
+                    "grade": {
+                        "percentage": 90,
+                        "letter": "A-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS304",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS401",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "SE301",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS403",
+                    "semester": "spring"
+                },
+                {
+                    "code": "SE402",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "firstName": "Sarah",
+            "lastName": "Brown",
+            "studentId": "2023-7004",
+            "dateOfBirth": "2005-04-18",
+            "email": "sarah.brown@university.edu",
+            "degree": "IT",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 83,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 81,
+                        "letter": "B-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "firstName": "David",
+            "lastName": "Miller",
+            "studentId": "2022-7005",
+            "dateOfBirth": "2004-09-25",
+            "email": "david.miller@university.edu",
+            "degree": "CS",
+            "year": 2,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 86,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 90,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "SE201",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS303",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS304",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "firstName": "Olivia",
+            "lastName": "Taylor",
+            "studentId": "2021-7006",
+            "dateOfBirth": "2003-06-12",
+            "email": "olivia.taylor@university.edu",
+            "degree": "DS",
+            "year": 3,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 96,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 94,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 95,
+                        "letter": "A"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 93,
+                        "letter": "A"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 94,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS201",
+                    "grade": {
+                        "percentage": 97,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS202",
+                    "grade": {
+                        "percentage": 95,
+                        "letter": "A"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS304",
+                    "grade": {
+                        "percentage": 93,
+                        "letter": "A"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS401",
+                    "grade": {
+                        "percentage": 96,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS301",
+                    "grade": {
+                        "percentage": 98,
+                        "letter": "A+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS302",
+                    "semester": "spring"
+                },
+                {
+                    "code": "DS402",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "firstName": "William",
+            "lastName": "Anderson",
+            "studentId": "2023-7007",
+            "dateOfBirth": "2005-08-30",
+            "email": "william.anderson@university.edu",
+            "degree": "SE",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 78,
+                        "letter": "C+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 82,
+                        "letter": "B-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 75,
+                        "letter": "C"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "SE201",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "firstName": "Sophia",
+            "lastName": "Martinez",
+            "studentId": "2022-7008",
+            "dateOfBirth": "2004-02-15",
+            "email": "sophia.martinez@university.edu",
+            "degree": "IT",
+            "year": 2,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 83,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 84,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 86,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "IT301",
+                    "grade": {
+                        "percentage": 86,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS303",
+                    "semester": "spring"
+                },
+                {
+                    "code": "IT302",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "firstName": "James",
+            "lastName": "Thompson",
+            "studentId": "2023-7009",
+            "dateOfBirth": "2005-11-03",
+            "email": "james.thompson@university.edu",
+            "degree": "CS",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 93,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "firstName": "Isabella",
+            "lastName": "Garcia",
+            "studentId": "2021-7010",
+            "dateOfBirth": "2003-04-27",
+            "email": "isabella.garcia@university.edu",
+            "degree": "SE",
+            "year": 3,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 90,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 93,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 90,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "SE201",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "SE202",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS304",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS401",
+                    "grade": {
+                        "percentage": 94,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "SE301",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "SE402",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS403",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "firstName": "Ethan",
+            "lastName": "Rodriguez",
+            "studentId": "2022-7011",
+            "dateOfBirth": "2004-05-14",
+            "email": "ethan.rodriguez@university.edu",
+            "degree": "CS",
+            "year": 2,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 84,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 86,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 82,
+                        "letter": "B-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 83,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS303",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS304",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "firstName": "Ava",
+            "lastName": "Patel",
+            "studentId": "2021-7012",
+            "dateOfBirth": "2003-09-28",
+            "email": "ava.patel@university.edu",
+            "degree": "DS",
+            "year": 3,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 95,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 93,
+                        "letter": "A"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 94,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 90,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS201",
+                    "grade": {
+                        "percentage": 96,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS202",
+                    "grade": {
+                        "percentage": 93,
+                        "letter": "A"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS304",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS401",
+                    "grade": {
+                        "percentage": 95,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS301",
+                    "grade": {
+                        "percentage": 94,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS302",
+                    "semester": "spring"
+                },
+                {
+                    "code": "DS402",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "firstName": "Lucas",
+            "lastName": "Kim",
+            "studentId": "2023-7013",
+            "dateOfBirth": "2005-01-31",
+            "email": "lucas.kim@university.edu",
+            "degree": "IT",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 83,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "IT301",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "firstName": "Maya",
+            "lastName": "Singh",
+            "studentId": "2023-7014",
+            "dateOfBirth": "2005-07-19",
+            "email": "maya.singh@university.edu",
+            "degree": "SE",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 90,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "SE201",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "firstName": "Daniel",
+            "lastName": "Chen",
+            "studentId": "2022-7015",
+            "dateOfBirth": "2004-03-25",
+            "email": "daniel.chen@university.edu",
+            "degree": "IT",
+            "year": 2,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 86,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 84,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 90,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "IT301",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS303",
+                    "semester": "spring"
+                },
+                {
+                    "code": "IT302",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "firstName": "Noah",
+            "lastName": "Zhang",
+            "studentId": "2021-7016",
+            "dateOfBirth": "2003-08-11",
+            "email": "noah.zhang@university.edu",
+            "degree": "CS",
+            "year": 3,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 93,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 90,
+                        "letter": "A-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 94,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS303",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS304",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS401",
+                    "grade": {
+                        "percentage": 95,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS402",
+                    "grade": {
+                        "percentage": 93,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS403",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS503",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "firstName": "Sofia",
+            "lastName": "Nguyen",
+            "studentId": "2023-7017",
+            "dateOfBirth": "2005-04-03",
+            "email": "sofia.nguyen@university.edu",
+            "degree": "SE",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 76,
+                        "letter": "C"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 72,
+                        "letter": "C-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 68,
+                        "letter": "D+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "SE201",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "firstName": "Benjamin",
+            "lastName": "O'Connor",
+            "studentId": "2022-7018",
+            "dateOfBirth": "2004-11-22",
+            "email": "benjamin.oconnor@university.edu",
+            "degree": "DS",
+            "year": 2,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 90,
+                        "letter": "A-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 86,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS201",
+                    "grade": {
+                        "percentage": 93,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS304",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "firstName": "Emily",
+            "lastName": "Wilson",
+            "studentId": "2021-7019",
+            "dateOfBirth": "2003-12-15",
+            "email": "emily.wilson@university.edu",
+            "degree": "IT",
+            "year": 3,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 83,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 81,
+                        "letter": "B-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 84,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 86,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 82,
+                        "letter": "B-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "IT301",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "IT302",
+                    "grade": {
+                        "percentage": 86,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS401",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "IT401",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS403",
+                    "semester": "spring"
+                },
+                {
+                    "code": "IT302",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "firstName": "Alexander",
+            "lastName": "Kowalski",
+            "studentId": "2023-7020",
+            "dateOfBirth": "2005-06-27",
+            "email": "alexander.kowalski@university.edu",
+            "degree": "CS",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 94,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 96,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 21,
+            "firstName": "Liam",
+            "lastName": "Murphy",
+            "studentId": "2022-7021",
+            "dateOfBirth": "2004-02-17",
+            "email": "liam.murphy@university.edu",
+            "degree": "SE",
+            "year": 2,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 81,
+                        "letter": "B-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 79,
+                        "letter": "C+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 83,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 82,
+                        "letter": "B-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 80,
+                        "letter": "B-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 84,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 82,
+                        "letter": "B-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "SE201",
+                    "grade": {
+                        "percentage": 86,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS303",
+                    "semester": "spring"
+                },
+                {
+                    "code": "SE202",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 22,
+            "firstName": "Aisha",
+            "lastName": "Khan",
+            "studentId": "2021-7022",
+            "dateOfBirth": "2003-09-08",
+            "email": "aisha.khan@university.edu",
+            "degree": "DS",
+            "year": 3,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 97,
+                        "letter": "A+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 95,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 96,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 98,
+                        "letter": "A+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 94,
+                        "letter": "A"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 93,
+                        "letter": "A"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 96,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 97,
+                        "letter": "A+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS201",
+                    "grade": {
+                        "percentage": 99,
+                        "letter": "A+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS202",
+                    "grade": {
+                        "percentage": 98,
+                        "letter": "A+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS304",
+                    "grade": {
+                        "percentage": 95,
+                        "letter": "A"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS401",
+                    "grade": {
+                        "percentage": 97,
+                        "letter": "A+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS301",
+                    "grade": {
+                        "percentage": 96,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS302",
+                    "semester": "spring"
+                },
+                {
+                    "code": "DS402",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "firstName": "Gabriel",
+            "lastName": "Santos",
+            "studentId": "2023-7023",
+            "dateOfBirth": "2005-11-14",
+            "email": "gabriel.santos@university.edu",
+            "degree": "IT",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 83,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "IT301",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "firstName": "Rachel",
+            "lastName": "Cohen",
+            "studentId": "2022-7024",
+            "dateOfBirth": "2004-05-23",
+            "email": "rachel.cohen@university.edu",
+            "degree": "CS",
+            "year": 2,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 90,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 93,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS303",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS304",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "firstName": "Marcus",
+            "lastName": "Ibrahim",
+            "studentId": "2023-7025",
+            "dateOfBirth": "2005-03-30",
+            "email": "marcus.ibrahim@university.edu",
+            "degree": "SE",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 86,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 84,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 82,
+                        "letter": "B-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "SE201",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 26,
+            "firstName": "Victoria",
+            "lastName": "Lee",
+            "studentId": "2023-7026",
+            "dateOfBirth": "2005-08-12",
+            "email": "victoria.lee@university.edu",
+            "degree": "CS",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 86,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 27,
+            "firstName": "Raj",
+            "lastName": "Sharma",
+            "studentId": "2022-7027",
+            "dateOfBirth": "2004-04-15",
+            "email": "raj.sharma@university.edu",
+            "degree": "DS",
+            "year": 2,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 94,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 90,
+                        "letter": "A-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 93,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 95,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS201",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS304",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 28,
+            "firstName": "Hannah",
+            "lastName": "Fischer",
+            "studentId": "2021-7028",
+            "dateOfBirth": "2003-10-20",
+            "email": "hannah.fischer@university.edu",
+            "degree": "IT",
+            "year": 3,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 83,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 86,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 84,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "IT301",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "IT302",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS401",
+                    "grade": {
+                        "percentage": 86,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "IT401",
+                    "grade": {
+                        "percentage": 84,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS403",
+                    "semester": "spring"
+                },
+                {
+                    "code": "IT302",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 29,
+            "firstName": "Diego",
+            "lastName": "Morales",
+            "studentId": "2023-7029",
+            "dateOfBirth": "2005-01-25",
+            "email": "diego.morales@university.edu",
+            "degree": "SE",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 95,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 93,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "SE201",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 30,
+            "firstName": "Yuki",
+            "lastName": "Tanaka",
+            "studentId": "2022-7030",
+            "dateOfBirth": "2004-07-08",
+            "email": "yuki.tanaka@university.edu",
+            "degree": "CS",
+            "year": 2,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 96,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 94,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 95,
+                        "letter": "A"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 93,
+                        "letter": "A"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 94,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "SE201",
+                    "grade": {
+                        "percentage": 90,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS303",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS304",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 31,
+            "firstName": "Fatima",
+            "lastName": "Al-Sayed",
+            "studentId": "2023-7031",
+            "dateOfBirth": "2005-09-03",
+            "email": "fatima.alsayed@university.edu",
+            "degree": "DS",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 32,
+            "firstName": "Pavel",
+            "lastName": "Ivanov",
+            "studentId": "2022-7032",
+            "dateOfBirth": "2004-12-18",
+            "email": "pavel.ivanov@university.edu",
+            "degree": "IT",
+            "year": 2,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 78,
+                        "letter": "C+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 82,
+                        "letter": "B-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 75,
+                        "letter": "C"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 81,
+                        "letter": "B-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 84,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 79,
+                        "letter": "C+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 83,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 80,
+                        "letter": "B-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "IT301",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS303",
+                    "semester": "spring"
+                },
+                {
+                    "code": "IT302",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 33,
+            "firstName": "Zara",
+            "lastName": "Wong",
+            "studentId": "2021-7033",
+            "dateOfBirth": "2003-05-27",
+            "email": "zara.wong@university.edu",
+            "degree": "SE",
+            "year": 3,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 97,
+                        "letter": "A+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 95,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 96,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 98,
+                        "letter": "A+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 94,
+                        "letter": "A"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 96,
+                        "letter": "A"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 97,
+                        "letter": "A+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 95,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "SE201",
+                    "grade": {
+                        "percentage": 98,
+                        "letter": "A+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "SE202",
+                    "grade": {
+                        "percentage": 96,
+                        "letter": "A"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS304",
+                    "grade": {
+                        "percentage": 97,
+                        "letter": "A+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS401",
+                    "grade": {
+                        "percentage": 95,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "SE301",
+                    "grade": {
+                        "percentage": 98,
+                        "letter": "A+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS403",
+                    "semester": "spring"
+                },
+                {
+                    "code": "SE402",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 34,
+            "firstName": "Liam",
+            "lastName": "O'Brien",
+            "studentId": "2023-7034",
+            "dateOfBirth": "2005-02-14",
+            "email": "liam.obrien@university.edu",
+            "degree": "CS",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 73,
+                        "letter": "C"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 68,
+                        "letter": "D+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 71,
+                        "letter": "C-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 35,
+            "firstName": "Nina",
+            "lastName": "Andersson",
+            "studentId": "2022-7035",
+            "dateOfBirth": "2004-08-09",
+            "email": "nina.andersson@university.edu",
+            "degree": "DS",
+            "year": 2,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 90,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 93,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 90,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS201",
+                    "grade": {
+                        "percentage": 94,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "DS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS304",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 36,
+            "firstName": "Marco",
+            "lastName": "Rossi",
+            "studentId": "2021-7036",
+            "dateOfBirth": "2003-11-05",
+            "email": "marco.rossi@university.edu",
+            "degree": "IT",
+            "year": 3,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 84,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 86,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 82,
+                        "letter": "B-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 83,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "IT301",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "IT302",
+                    "grade": {
+                        "percentage": 86,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS401",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "IT401",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS403",
+                    "semester": "spring"
+                },
+                {
+                    "code": "IT302",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 37,
+            "firstName": "Amara",
+            "lastName": "Okafor",
+            "studentId": "2023-7037",
+            "dateOfBirth": "2005-03-22",
+            "email": "amara.okafor@university.edu",
+            "degree": "SE",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 98,
+                        "letter": "A+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 97,
+                        "letter": "A+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 99,
+                        "letter": "A+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "SE201",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 38,
+            "firstName": "Kai",
+            "lastName": "Nakamura",
+            "studentId": "2022-7038",
+            "dateOfBirth": "2004-06-14",
+            "email": "kai.nakamura@university.edu",
+            "degree": "CS",
+            "year": 2,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 94,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 93,
+                        "letter": "A"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 95,
+                        "letter": "A"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 90,
+                        "letter": "A-"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 92,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 91,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "SE201",
+                    "grade": {
+                        "percentage": 93,
+                        "letter": "A"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS303",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS304",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 39,
+            "firstName": "Julia",
+            "lastName": "Kovač",
+            "studentId": "2023-7039",
+            "dateOfBirth": "2005-12-08",
+            "email": "julia.kovac@university.edu",
+            "degree": "DS",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 65,
+                        "letter": "D"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 72,
+                        "letter": "C-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 68,
+                        "letter": "D+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 40,
+            "firstName": "Hassan",
+            "lastName": "El-Sayed",
+            "studentId": "2022-7040",
+            "dateOfBirth": "2004-09-30",
+            "email": "hassan.elsayed@university.edu",
+            "degree": "SE",
+            "year": 2,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 87,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "grade": {
+                        "percentage": 86,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "grade": {
+                        "percentage": 89,
+                        "letter": "B+"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "grade": {
+                        "percentage": 84,
+                        "letter": "B"
+                    },
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS301",
+                    "grade": {
+                        "percentage": 88,
+                        "letter": "B+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS302",
+                    "grade": {
+                        "percentage": 86,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "SE201",
+                    "grade": {
+                        "percentage": 90,
+                        "letter": "A-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS303",
+                    "semester": "spring"
+                },
+                {
+                    "code": "SE202",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 41,
+            "firstName": "John",
+            "lastName": "Williams",
+            "studentId": "2023-7041",
+            "dateOfBirth": "2005-03-27",
+            "email": "john.williams@university.edu",
+            "degree": "CS",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 75,
+                        "letter": "C"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 82,
+                        "letter": "B-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 80,
+                        "letter": "B-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 42,
+            "firstName": "Robert",
+            "lastName": "Johnson",
+            "studentId": "2023-7042",
+            "dateOfBirth": "2005-12-05",
+            "email": "robert.johnson@university.edu",
+            "degree": "IT",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 83,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 84,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 76,
+                        "letter": "C"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "semester": "spring"
+                }
+            ]
+        },
+        {
+            "id": 43,
+            "firstName": "William",
+            "lastName": "Brown",
+            "studentId": "2023-7043",
+            "dateOfBirth": "2005-02-07",
+            "email": "william.brown@university.edu",
+            "degree": "SE",
+            "year": 1,
+            "courses": [
+                {
+                    "code": "CS101",
+                    "grade": {
+                        "percentage": 85,
+                        "letter": "B"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS102",
+                    "grade": {
+                        "percentage": 81,
+                        "letter": "B-"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CE101",
+                    "grade": {
+                        "percentage": 77,
+                        "letter": "C+"
+                    },
+                    "semester": "autumn"
+                },
+                {
+                    "code": "CS201",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CS202",
+                    "semester": "spring"
+                },
+                {
+                    "code": "CE102",
+                    "semester": "spring"
+                }
+            ]
+        }
+    ],
+    "degrees": [
+        {
+            "id": 1,
+            "name": "Computer Science",
+            "code": "CS",
+            "yearsToComplete": 4,
+            "active": true
+        },
+        {
+            "id": 2,
+            "name": "Software Engineering",
+            "code": "SE",
+            "yearsToComplete": 4,
+            "active": true
+        },
+        {
+            "id": 3,
+            "name": "Information Technology",
+            "code": "IT",
+            "yearsToComplete": 3,
+            "active": true
+        },
+        {
+            "id": 4,
+            "name": "Data Science",
+            "code": "DS",
+            "yearsToComplete": 4,
+            "active": true
+        },
+        {
+            "id": 5,
+            "name": "Computer Engineering",
+            "code": "CE",
+            "yearsToComplete": 4,
+            "active": false
+        }
+    ],
+    "courses": [
+        {
+            "id": 1,
+            "name": "Introduction to Programming",
+            "code": "CS101",
+            "semester": "autumn",
+            "yearOfStudy": 1
+        },
+        {
+            "id": 2,
+            "name": "Mathematics for Computer Science",
+            "code": "CS102",
+            "semester": "autumn",
+            "yearOfStudy": 1
+        },
+        {
+            "id": 3,
+            "name": "Digital Logic Design",
+            "code": "CE101",
+            "semester": "autumn",
+            "yearOfStudy": 1
+        },
+        {
+            "id": 4,
+            "name": "Data Structures",
+            "code": "CS201",
+            "semester": "spring",
+            "yearOfStudy": 1
+        },
+        {
+            "id": 5,
+            "name": "Object-Oriented Programming",
+            "code": "CS202",
+            "semester": "spring",
+            "yearOfStudy": 1
+        },
+        {
+            "id": 6,
+            "name": "Computer Architecture",
+            "code": "CE102",
+            "semester": "spring",
+            "yearOfStudy": 1
+        },
+        {
+            "id": 7,
+            "name": "Database Systems",
+            "code": "CS301",
+            "semester": "autumn",
+            "yearOfStudy": 2
+        },
+        {
+            "id": 8,
+            "name": "Algorithms and Complexity",
+            "code": "CS302",
+            "semester": "autumn",
+            "yearOfStudy": 2
+        },
+        {
+            "id": 9,
+            "name": "Software Engineering Fundamentals",
+            "code": "SE201",
+            "semester": "autumn",
+            "yearOfStudy": 2
+        },
+        {
+            "id": 10,
+            "name": "Data Analysis Basics",
+            "code": "DS201",
+            "semester": "autumn",
+            "yearOfStudy": 2
+        },
+        {
+            "id": 11,
+            "name": "Web Development",
+            "code": "CS303",
+            "semester": "spring",
+            "yearOfStudy": 2
+        },
+        {
+            "id": 12,
+            "name": "Operating Systems",
+            "code": "CS304",
+            "semester": "spring",
+            "yearOfStudy": 2
+        },
+        {
+            "id": 13,
+            "name": "Software Design Patterns",
+            "code": "SE202",
+            "semester": "spring",
+            "yearOfStudy": 2
+        },
+        {
+            "id": 14,
+            "name": "Statistical Methods",
+            "code": "DS202",
+            "semester": "spring",
+            "yearOfStudy": 2
+        },
+        {
+            "id": 15,
+            "name": "Computer Networks",
+            "code": "CS401",
+            "semester": "autumn",
+            "yearOfStudy": 3
+        },
+        {
+            "id": 16,
+            "name": "Artificial Intelligence",
+            "code": "CS402",
+            "semester": "autumn",
+            "yearOfStudy": 3
+        },
+        {
+            "id": 17,
+            "name": "Software Testing",
+            "code": "SE301",
+            "semester": "autumn",
+            "yearOfStudy": 3
+        },
+        {
+            "id": 18,
+            "name": "Machine Learning Fundamentals",
+            "code": "DS301",
+            "semester": "autumn",
+            "yearOfStudy": 3
+        },
+        {
+            "id": 19,
+            "name": "Cybersecurity",
+            "code": "IT301",
+            "semester": "spring",
+            "yearOfStudy": 3
+        },
+        {
+            "id": 20,
+            "name": "Mobile Development",
+            "code": "CS403",
+            "semester": "spring",
+            "yearOfStudy": 3
+        },
+        {
+            "id": 21,
+            "name": "Cloud Computing",
+            "code": "IT302",
+            "semester": "spring",
+            "yearOfStudy": 3
+        },
+        {
+            "id": 22,
+            "name": "Big Data Analytics",
+            "code": "DS302",
+            "semester": "spring",
+            "yearOfStudy": 3
+        },
+        {
+            "id": 23,
+            "name": "Distributed Systems",
+            "code": "CS501",
+            "semester": "autumn",
+            "yearOfStudy": 4
+        },
+        {
+            "id": 24,
+            "name": "Computer Graphics",
+            "code": "CS502",
+            "semester": "autumn",
+            "yearOfStudy": 4
+        },
+        {
+            "id": 25,
+            "name": "Project Management",
+            "code": "SE401",
+            "semester": "autumn",
+            "yearOfStudy": 4
+        },
+        {
+            "id": 26,
+            "name": "Deep Learning",
+            "code": "DS401",
+            "semester": "autumn",
+            "yearOfStudy": 4
+        },
+        {
+            "id": 27,
+            "name": "Software Architecture",
+            "code": "SE402",
+            "semester": "spring",
+            "yearOfStudy": 4
+        },
+        {
+            "id": 28,
+            "name": "Parallel Programming",
+            "code": "CS503",
+            "semester": "spring",
+            "yearOfStudy": 4
+        },
+        {
+            "id": 29,
+            "name": "Natural Language Processing",
+            "code": "DS402",
+            "semester": "spring",
+            "yearOfStudy": 4
+        },
+        {
+            "id": 30,
+            "name": "Internet of Things",
+            "code": "IT401",
+            "semester": "spring",
+            "yearOfStudy": 3
+        }
+    ]
+}
