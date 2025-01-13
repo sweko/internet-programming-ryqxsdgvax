@@ -48,15 +48,15 @@ If you already forked the repository
 
 ## 4. Do the exam
 
-1. Open the markdown file in the `docs` folder in your browser. It should be something like `finals-<current-date>/docs/readme.md`. This is the file with the instructions for the exam.
+1. Open the markdown file `task.md` in the `docs` folder in your browser. This is the file with the instructions for the exam. (Clicking [here](https://github.com/sweko/internet-programming-ryqxsdgvax/blob/main/docs/task.md) should display the formatted version of the file)
 
 2. Carefully read the instructions for the exam. If you have any questions, ask the instructor.
 
-3. Execute the instructions for the exam. Note that the instructions may require you to do some research on your own, and that you may need to use the internet to find the information you need. However, you are not allowed to ask for help from anyone else, and you are not allowed to use generative AI's like GPT-3 to generate the code for you. Additionally, usage of personal electronic devices (phone, laptop, ....) is disallowed as well.
+3. Execute the instructions for the exam. Note that the instructions may require you to do some research on your own, and that you may need to use the internet to find the information you need. However, you are not allowed to ask for help from anyone else. You are allowed to use generative AI's like ChatGPT to generate some code for you, but the submitted code will be graded nonetheless. You are allowed to use a personal laptop, but not any additional hardware like a phone or tablet.
 
 ## 5. Commit and push your changes
 
-1. Open a terminal and navigate to the folder for the exam. The folder should be something like `finals-<current-date>/code/<your-student-id>`
+1. Open a terminal and navigate to the folder for the exam (any subfolder of the forked repository). You can use the `cd` command to navigate to a folder, and the `dir` command (Windows) or the `ls` command (Linux/Mac) to list the contents of the current folder. You can use the `git status` command to check the status of the repository.
 
 2. Run the following command: `git add .`. This will add all the files in the folder to the staging area.
 
