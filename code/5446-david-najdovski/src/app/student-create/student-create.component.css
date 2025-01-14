@@ -1,0 +1,33 @@
+h2 {
+  color: #333; /* Dark text color */
+}
+
+form {
+  margin: 10px 0; /* Margin for the form */
+  padding: 10px; /* Padding for the form */
+  border: 1px solid #ccc; /* Border for the form */
+}
+
+label {
+  display: block; /* Block display for labels */
+  margin: 5px 0; /* Margin for labels */
+}
+
+input {
+  width: 100%; /* Full width for inputs */
+  padding: 8px; /* Padding for inputs */
+  margin-bottom: 10px; /* Space below inputs */
+  border: 1px solid #ccc; /* Border for inputs */
+}
+
+button {
+  padding: 5px 10px; /* Padding for buttons */
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}

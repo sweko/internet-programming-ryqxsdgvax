@@ -1,0 +1,22 @@
+h2 {
+  color: #333; /* Dark text color */
+}
+
+.student-info {
+  margin: 10px 0; /* Margin for student info */
+  padding: 10px; /* Padding for student info */
+  border: 1px solid #ccc; /* Border for student info */
+}
+
+button {
+  margin-top: 10px; /* Space above the button */
+  padding: 5px 10px; /* Padding for buttons */
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
