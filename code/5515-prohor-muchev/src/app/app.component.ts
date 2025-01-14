@@ -1,49 +1,38 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { RouterModule, RouterOutlet } from '@angular/router';
-import { delay, Observable, Subject, takeUntil } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterModule],
+  standalone: true,
+  imports: [RouterModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  // This file should be refactored, feel free to move the code around, create new files, or delete it altogether.
-  currentYear: number = 0;
-
-  welcomeMessage = 'Welcome to the Student Management System!';
+  currentYear: number = new Date().getFullYear();
+  welcomeMessage = 'Welcome to the Student Management System';
   statusMessage = 'Checking data connection...';
 
   routes = [
-    { linkName: 'Students' , url: '/students' },
+    { linkName: 'Students', url: '/students' },
     { linkName: 'Degrees', url: '/degrees' },
     { linkName: 'Courses', url: '/courses' },
     { linkName: 'Statistics', url: '/statistics' }
   ];
 
-  private dataTest: Observable<any>;
-
-  // Should this http be here or in a separate file?
-  constructor(private http: HttpClient) { 
-    this.dataTest = this.http.get('http://localhost:3000', {responseType: "text"}).pipe(delay(1000), takeUntilDestroyed());
-  }
-
+  constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.currentYear = new Date().getFullYear();
-
-    this.dataTest.subscribe({
-      next: _ => {
-        this.statusMessage = 'Data connection is working!';
+    this.http.get('http://localhost:3000/students').subscribe({
+      next: () => {
+        this.statusMessage = 'Connected to data server successfully!';
       },
       error: (error) => {
-        this.statusMessage = `Data connection failed (see console for details)! ${error.message}`;
-        console.error(error);
+        this.statusMessage = `Connection failed! ${error.message}`;
+        console.error('API Error:', error);
       }
     });
   }
-
 }
