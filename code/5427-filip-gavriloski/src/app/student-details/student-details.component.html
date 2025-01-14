@@ -1,0 +1,13 @@
+<div *ngIf="student">
+  <h2>Student Details</h2>
+  <p><strong>Name:</strong> {{ student.name }}</p>
+  <p><strong>Age:</strong> {{ student.age }}</p>
+  <p><strong>Degree ID:</strong> {{ student.degreeId }}</p>
+
+  <button (click)="editStudent()">Edit Student</button>
+  <button (click)="deleteStudent()">Delete Student</button>
+  <button (click)="goBack()">Back to Student List</button>
+</div>
+<div *ngIf="!student">
+  <p>Loading student details...</p>
+</div>
