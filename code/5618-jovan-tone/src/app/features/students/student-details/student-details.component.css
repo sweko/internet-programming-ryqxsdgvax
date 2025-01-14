@@ -1,0 +1,135 @@
+.student-details-container {
+  padding: var(--spacing-md);
+  padding-bottom: 60px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.details-container {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.details-group {
+  margin-bottom: 2rem;
+}
+
+.details-group:last-child {
+  margin-bottom: 0;
+}
+
+.details-group h2 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.details-item {
+  display: flex;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.details-item label {
+  font-weight: 500;
+  color: var(--text-secondary);
+  width: 150px;
+}
+
+.details-item span {
+  color: var(--text-primary);
+}
+
+.course-list {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--primary-light);
+}
+
+.course-item {
+  padding: 1rem;
+  border-bottom: 1px solid var(--primary-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+}
+
+.course-item:last-child {
+  border-bottom: none;
+}
+
+.course-info {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.semester {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.grade {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.not-graded {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-danger {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary {
+  background-color: var(--white);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: var(--white);
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #bd2130;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+} 
