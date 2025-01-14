@@ -1,95 +1,34 @@
-/* Navbar styles */
-.navbar {
-  background-color: var(--primary);
-  padding: var(--spacing-md) 0;
-  box-shadow: var(--shadow-sm);
+/* Container that holds all content */
+.container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Header styles */
+header {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.navbar-brand {
-  text-decoration: none;
-}
-
-.navbar-brand h1 {
-  color: var(--white);
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-.navbar-nav {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: var(--spacing-md);
-}
-
-.nav-link {
-  color: var(--light);
-  text-decoration: none;
-  padding: var(--spacing-sm) var(--spacing-md);
-  border-radius: var(--border-radius-sm);
-  transition: all var(--transition-fast);
-}
-
-.nav-link:hover,
-.nav-link.active {
-  background-color: var(--primary-light);
-}
-
-/* Main content styles */
-.main-content {
-  min-height: calc(
-    100vh - 240px
-  ); /* Adjust based on navbar and footer height */
-  padding: var(--spacing-xl) 0;
+header h1 {
+  font-size: 36px;
+  color: #4CAF50;
 }
 
 /* Footer styles */
-.footer {
-  background-color: var(--primary);
-  color: var(--light);
-  padding: var(--spacing-sm) 0;
-  margin-top: auto;
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #777;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--spacing-md);
+footer p {
+  font-size: 14px;
 }
 
-.footer-link {
-  color: var(--secondary-light);
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
-
-.footer-link:hover {
-  color: var(--white);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .navbar-container {
-    flex-direction: column;
-    gap: var(--spacing-md);
-  }
-
-  .navbar-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-  }
+/* Main content area */
+main {
+  margin-bottom: 50px;
 }

@@ -1,0 +1,35 @@
+<div class="student-list">
+  <h2>Student List</h2>
+
+  <!-- Show error message if data loading fails -->
+  <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+
+  <!-- Display the table if students are loaded -->
+  <table *ngIf="students.length" class="student-table">
+    <thead>
+      <tr>
+        <th>Student ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <td>{{ student.studentId }}</td>
+        <td>{{ student.firstName }} {{ student.lastName }}</td>
+        <td>{{ student.email }}</td>
+        <td>
+          <button [routerLink]="['/students', student.id]">View</button>
+          <button [routerLink]="['/students', student.id, 'edit']">Edit</button>
+          <button (click)="deleteStudent(student.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Add new student button -->
+  <div class="add-student-btn">
+    <button [routerLink]="['/students/create']">Add New Student</button>
+  </div>
+</div>
