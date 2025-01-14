@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
+import { StudentListComponent } from './components/student-list/student-list.component';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule 
-  ],
-  bootstrap: [AppComponent] // Ensure AppComponent is correctly set up
+    declarations: [
+        StudentListComponent,
+        // other components
+    ],
+    imports: [
+        RouterModule,
+        StudentListComponent,
+        // other modules
+    ],
 })
-export class AppModule { }
+export class AppModule {}
