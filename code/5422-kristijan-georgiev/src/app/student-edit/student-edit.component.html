@@ -1,0 +1,27 @@
+<div *ngIf="student">
+    <h2>Edit Student</h2>
+    <form>
+        <label for="firstname">FirstName:</label>
+        <input [(ngModel)]="student.firstName" name="firstname" />
+
+        <label for="lastname">LastName:</label>
+        <input [(ngModel)]="student.lastName" name="lastname" />
+
+        <label for="studentId">StudentId:</label>
+        <input [(ngModel)]="student.studentId" name="studentId" />
+
+        <label for="dateOfBirth">DateOfBirth:</label>
+        <input [(ngModel)]="student.dateOfBirth" name="dateOfBirth" type="date" />
+
+        <label for="email">Email:</label>
+        <input [(ngModel)]="student.email" name="email" />
+
+        <label for="degree">Degree:</label>
+        <input [(ngModel)]="student.degree" name="degree" />
+
+        <label for="year">Year:</label>
+        <input [(ngModel)]="student.year" name="year" type="number" />
+
+        <button style="background-color: rgb(23, 124, 218); color: white;" (click)="saveChanges()">Save Changes</button>
+    </form>
+</div>

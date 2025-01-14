@@ -1,0 +1,23 @@
+/* Style for the parent div */
+div {
+    border: 2px solid #4CAF50; /* Green border */
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Light background */
+    width: 300px; /* Fixed width for the container */
+    margin: 20px auto; /* Center alignment */
+    font-family: Arial, sans-serif; /* Font styling */
+}
+
+/* Style for paragraph tags */
+p {
+    font-size: 16px; /* Text size */
+    color: #333; /* Dark text color */
+    margin: 8px 0; /* Space between paragraphs */
+}
+
+/* Style for inline text (like year, name, id) */
+p span {
+    font-weight: bold; /* Make important text bold */
+    color: #007BFF; /* Highlighted color */
+}

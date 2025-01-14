@@ -1,0 +1,41 @@
+<br>
+<div>
+    <div class="filter-container">
+        <label for="firstnamefilter">FirstName:</label>
+        <input [(ngModel)]="firstnamefilter" (input)='applyFilters()' name="firstnamefilter" class="input-field"/>
+    </div>
+    <button style="background-color: rgb(0, 192, 250); color: white;"><a routerLink="/episode-add" class="add-episode">Add New Episode</a></button>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th (click)="sortByID()">ID</th>
+                <th (click)="sortByFirstName()">FirstName</th>
+                <th>LastName</th>
+                <th>StudentId</th>
+                <th>DateOfBirth</th>
+                <th>Email</th>
+                <th>Degree</th>
+                <th>Year</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td>{{ student.id }}</td>
+                <td>{{ student.firstName }}</td>
+                <td>{{ student.lastName }}</td>
+                <td>{{ student.studentId }}</td>
+                <td>{{ student.dateOfBirth }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{  student.degree }}</td>
+                <td>{{ student.year }}</td>
+                <td>
+                    <button style="background-color: blue; color: white;" (click)="viewStudentDetails(student)">View</button>
+                    <button style="background-color: rgb(21, 177, 15); color: white;" (click)="editStudent(student)">Edit</button>
+                    <button style="background-color: red; color: white;" (click)="deleteStudent(student)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

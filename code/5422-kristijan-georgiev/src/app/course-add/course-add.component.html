@@ -1,0 +1,24 @@
+<div>
+    <h2>Add New Course</h2>
+    <form (submit)="addCourse()">
+        <!-- Movie Title -->
+        <label for="name">Name:</label>
+        <input [(ngModel)]="newCourse.name" name="name" required />
+
+        <label for="code">Code:</label>
+        <input [(ngModel)]="newCourse.code" name="code" type="number" />
+
+        <!-- Movie Year -->
+        <label for="semester">Semestar:</label>
+        <input [(ngModel)]="newCourse.semester" name="semestar" required />
+
+        <label for="yearofStudy">YearOfStudy:</label>
+        <input [(ngModel)]="newCourse.yearofStudy" name="yearofStudy" type="number" />
+
+        <hr>
+        <div style="margin-top: 10px;">
+            <button type="submit">Save Course</button>
+            <button type="button" class="back-button" (click)="goToCourseList()">Back</button>
+          </div>
+    </form>
+</div>
