@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  template: `
+    <h1>About Us</h1>
+    <p>This is the about page of the application.</p>
+  `,
 })
-export class AboutComponent {
-  // Logic for about component
-}
+export class AboutComponent {}
