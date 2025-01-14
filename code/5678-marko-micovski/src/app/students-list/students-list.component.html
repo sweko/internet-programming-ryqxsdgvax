@@ -1,0 +1,18 @@
+<h2>Students List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.email }}</td>
+    </tr>
+  </tbody>
+</table>
+<a routerLink="/students/create">Add New Student</a>
