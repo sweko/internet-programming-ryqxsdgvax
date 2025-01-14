@@ -1,0 +1,9 @@
+/* Styles for the About component */
+.about-container {
+  margin: 20px;
+}
+
+.about-header {
+  font-size: 24px;
+  font-weight: bold;
+}

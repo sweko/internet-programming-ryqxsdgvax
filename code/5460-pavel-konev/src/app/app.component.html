@@ -1,29 +1,36 @@
-<!-- The navigation should be moved to a header component -->
 <nav class="navbar">
   <div class="container navbar-container">
     <a routerLink="/" class="navbar-brand">
       <h1>University Management</h1>
     </a>
     <ul class="navbar-nav">
-      @for (route of routes; track $index) {
-        <li class="nav-item">
-          <a  [routerLink]="route.url" routerLinkActive="active" class="nav-link">{{route.linkName}}</a>
-        </li>
-      }
+      <li class="nav-item">
+        <a [routerLink]="['/students']" routerLinkActive="active" class="nav-link">Students</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/degrees']" routerLinkActive="active" class="nav-link">Degrees</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/courses']" routerLinkActive="active" class="nav-link">Courses</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/statistics']" routerLinkActive="active" class="nav-link">Statistics</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/about']" routerLinkActive="active" class="nav-link">About</a>
+      </li>
     </ul>
   </div>
 </nav>
 
-<!-- Main Content -->
 <main class="main-content">
   <div class="container">
     <h3>{{ welcomeMessage }}</h3>
-    <p>{{ statusMessage}}</p>
+    <p>{{ statusMessage }}</p>
     <router-outlet></router-outlet>
   </div>
 </main>
 
-<!-- This should be moved to a footer component -->
 <footer class="footer">
   <div class="container">
     <div class="footer-content">

@@ -1,0 +1,25 @@
+<div class="edit-form">
+  <h2>Edit Student</h2>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  <form (ngSubmit)="saveStudent()">
+    <label for="firstName">First Name:</label>
+    <input id="firstName" [(ngModel)]="student.firstName" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input id="lastName" [(ngModel)]="student.lastName" name="lastName" required>
+
+    <label for="email">Email:</label>
+    <input id="email" [(ngModel)]="student.email" name="email" required email>
+
+    <label for="degree">Degree:</label>
+    <select id="degree" [(ngModel)]="student.degree" name="degree" required>
+      <option *ngFor="let degree of degrees" [value]="degree.code">{{ degree.name }}</option>
+    </select>
+
+    <label for="year">Year:</label>
+    <input id="year" type="number" [(ngModel)]="student.year" name="year" min="1" max="4" required>
+
+    <button type="submit">Save</button>
+    <button routerLink="/students">Cancel</button>
+  </form>
+</div>

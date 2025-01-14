@@ -1,0 +1,10 @@
+/* Styles for the Courses component */
+.courses-list {
+  margin: 20px;
+}
+
+.course-item {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,9 @@
+/* Styles for the Statistics component */
+.statistics-container {
+  margin: 20px;
+}
+
+.statistics-header {
+  font-size: 24px;
+  font-weight: bold;
+}
