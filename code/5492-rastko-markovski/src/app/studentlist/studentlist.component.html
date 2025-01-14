@@ -1,0 +1,20 @@
+<input type="text" [(ngModel)]="search" placeholder="Search by student name" (change)="filterStudents()">
+
+<table>
+    <tr>
+        <th>Student</th>
+        <th>Degree</th>
+        <th>Actions</th>
+    </tr>
+    @for (student of displayStudents; track $index) {
+        <tr>
+            <td>{{ student.firstName }} {{ student.lastName }}</td>
+            <td>{{ student.degree }}</td>
+            <td>
+                <a [routerLink]="['/students', student.id]">View</a>
+                <a [routerLink]="['/students', student.id, 'edit']">Edit</a>
+                <a (click)="deleteStudent(student.id)">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
