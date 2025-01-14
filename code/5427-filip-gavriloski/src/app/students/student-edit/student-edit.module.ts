@@ -5,11 +5,11 @@ import { ReactiveFormsModule } from '@angular/forms'; // Import ReactiveFormsMod
 import { StudentEditComponent } from './student-edit.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [], // Remove StudentEditComponent from declarations
   imports: [
     CommonModule,
     ReactiveFormsModule, // Add ReactiveFormsModule to imports
-    RouterModule.forChild([{ path: '', component: StudentEditComponent }])
+    RouterModule.forChild([{ path: '', component: StudentEditComponent }]) // Set up routing
   ]
 })
 export class StudentEditModule { }

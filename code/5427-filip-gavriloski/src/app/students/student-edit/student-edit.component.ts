@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms'; // Import ReactiveFormsModule
 
 @Component({
+  standalone: true, // Marking the component as standalone
   selector: 'app-student-edit',
   template: `
     <h1>Edit Student</h1>
@@ -41,6 +43,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
       <button type="submit" [disabled]="studentForm.invalid">Submit</button>
     </form>
   `,
+  imports: [ReactiveFormsModule] // Add ReactiveFormsModule to imports
 })
 export class StudentEditComponent implements OnInit {
   studentForm!: FormGroup;
