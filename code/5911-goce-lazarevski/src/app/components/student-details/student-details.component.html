@@ -1,0 +1,18 @@
+<div *ngIf="student">
+    <h1>{{ student.firstName }}</h1>
+    <h1>{{ student.lastName }}</h1>
+    <p>ID: {{ student.id }}</p>
+    <p>Email: {{ student.email }}</p>
+    <p>Degree: {{ student.degree }}</p>
+    <p>Year: {{ student.year }}</p>
+  
+    <h2>Courses</h2>
+    <ul>
+        <li *ngFor="let course of student.courses">
+            {{ course.name }}: {{ course.grade || 'Not Graded' }}
+        </li>
+    </ul>
+  
+    <button routerLink="/students">Back to List</button>
+</div>
+  

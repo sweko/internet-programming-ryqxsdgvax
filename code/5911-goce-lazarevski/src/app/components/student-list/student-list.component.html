@@ -1,0 +1,25 @@
+<input type="text" placeholder="Search by name" [(ngModel)]="filter" (input)="applyFilter()" />
+<table>
+    <thead>
+        <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Degree</th>
+        <th>Year</th>
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of filteredStudents">
+        <td>{{ student.id }}</td>
+        <td>{{ student.firstName }}</td>
+        <td>{{ student.lastName }}</td>
+        <td>{{ student.degree }}</td>
+        <td>{{ student.year }}</td>
+        <td>
+            <button (click)="deleteStudent(student.id)">Delete</button>
+            <button routerLink="/students/{{ student.id }}">View</button>
+        </td>
+        </tr>
+    </tbody>
+</table>

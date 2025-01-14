@@ -1,0 +1,22 @@
+<div>
+    <label for="name">First Name:</label>
+    <input id="first-name" [(ngModel)]="student!.firstName" />
+
+    <label for="name">Last Name:</label>
+    <input id="last-name" [(ngModel)]="student!.lastName" />
+  
+    <label for="email">Email:</label>
+    <input id="email" [(ngModel)]="student!.email" />
+  
+    <label for="degree">Degree:</label>
+    <select id="degree" [(ngModel)]="student!.degree">
+        <option value="BSc">BSc</option>
+        <option value="MSc">MSc</option>
+        <option value="PhD">PhD</option>
+    </select>
+  
+    <label for="year">Year:</label>
+    <input id="year" type="number" [(ngModel)]="student!.year" />
+  
+    <button (click)="saveStudent()">Save</button>
+</div>
