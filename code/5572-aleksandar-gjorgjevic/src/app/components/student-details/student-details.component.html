@@ -1,0 +1,41 @@
+<p>student-details works!</p>
+<div class="student-details" *ngIf="student">
+    <h1>Student Details</h1>
+    <div>
+        <strong>Student ID:</strong> {{ student.studentId }}
+    </div>
+    <div>
+        <strong>Name:</strong> {{ student.firstName }} {{ student.lastName }}
+    </div>
+    <div>
+        <strong>Email:</strong> {{ student.email }}
+    </div>
+    <div>
+        <strong>Degree:</strong> {{ student.degree }}
+    </div>
+    <div>
+        <strong>Year:</strong> {{ student.year }}
+    </div>
+    <h2>Courses</h2>
+    <table *ngIf="student.courses.length > 0">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Semester</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let course of student.courses">
+                <td>{{ course.code }}</td>
+                <td>{{ course.semester }}</td>
+                <td>{{ course.grade ? course.grade.percentage + '%' : 'Not Graded' }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div *ngIf="student.courses.length === 0">
+        No courses available.
+    </div>
+    <button (click)="deleteStudent()">Delete Student</button>
+    <button (click)="goBack()">Back to List</button>
+</div>
