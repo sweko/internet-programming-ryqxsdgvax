@@ -85,3 +85,4 @@ export class StudentListComponent implements OnInit {
 
   // Additional methods for sorting and filtering can be added here
 }
+
