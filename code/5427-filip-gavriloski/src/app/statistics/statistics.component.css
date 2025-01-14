@@ -1,0 +1,13 @@
+/* Basic styles for the statistics component */
+h2 {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+}
