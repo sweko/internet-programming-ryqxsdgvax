@@ -1,0 +1,36 @@
+<div class="container mt-4" *@if="student">
+    <h2>Student Details</h2>
+    <div class="card p-3">
+        <h4>{{ student.firstName }} {{ student.lastName }}</h4>
+        <p><strong>Student ID:</strong> {{ student.studentId }}</p>
+        <p><strong>Date of Birth:</strong> {{ student.dateOfBirth }}</p>
+        <p><strong>Email:</strong> {{ student.email }}</p>
+        <p><strong>Degree:</strong> {{ student.degree }}</p>
+        <p><strong>Year:</strong> {{ student.year }}</p>
+        <h5>Courses</h5>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Semester</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *@if="let course of student.courses">
+                    <td>{{ course.code }}</td>
+                    <td>{{ course.semester }}</td>
+                    <td>
+                        {{ course.grade?.letter || 'Not Graded' }}
+                        <span *@if="course.grade">({{ course.grade?.percentage }}%)</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mt-3">
+        <button class="btn btn-primary" (click)="editStudent()">Edit</button>
+        <button class="btn btn-danger" (click)="deleteStudent()">Delete</button>
+        <button class="btn btn-secondary" (click)="backToList()">Back to List</button>
+    </div>
+</div>
