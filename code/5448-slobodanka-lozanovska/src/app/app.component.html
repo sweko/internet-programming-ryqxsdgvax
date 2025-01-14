@@ -13,23 +13,8 @@
     </ul>
   </div>
 </nav>
-
-<!-- Main Content -->
-<main class="main-content">
-  <div class="container">
     <h3>{{ welcomeMessage }}</h3>
     <p>{{ statusMessage}}</p>
     <router-outlet></router-outlet>
-  </div>
-</main>
+    <app-footer></app-footer>
 
-<!-- This should be moved to a footer component -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <p>&copy; {{currentYear}} University Management System</p>
-      <p>Student: <span>Your Name</span> | ID: <span>12345</span></p>
-      <a routerLink="/about" class="footer-link">About</a>
-    </div>
-  </div>
-</footer>
