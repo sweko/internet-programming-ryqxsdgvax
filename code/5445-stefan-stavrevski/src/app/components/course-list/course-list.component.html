@@ -1,0 +1,48 @@
+<div class="course-list">
+  <h1>Course List</h1>
+
+  <!-- Filters -->
+  <div class="filters">
+    <label>
+      Semester:
+      <select [(ngModel)]="filters.semester" (change)="applyFilters()">
+        <option value="">All</option>
+        <option *ngFor="let semester of semesters" [value]="semester">
+          {{ semester }}
+        </option>
+      </select>
+    </label>
+
+    <label>
+      Year:
+      <select [(ngModel)]="filters.year" (change)="applyFilters()">
+        <option value="">All</option>
+        <option *ngFor="let year of years" [value]="year">
+          {{ year }}
+        </option>
+      </select>
+    </label>
+
+    <button (click)="clearFilters()">Clear Filters</button>
+  </div>
+
+  <!-- Course Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Course Code</th>
+        <th>Course Name</th>
+        <th>Semester</th>
+        <th>Year of Study</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let course of filteredCourses">
+        <td>{{ course.code }}</td>
+        <td>{{ course.name }}</td>
+        <td>{{ course.semester }}</td>
+        <td>{{ course.yearOfStudy }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

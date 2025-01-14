@@ -1,0 +1,35 @@
+<div class="degree-list">
+  <h1>Degree List</h1>
+
+  <!-- Filters -->
+  <div class="filters">
+    <label>
+      Active Status:
+      <select [(ngModel)]="filters.active" (change)="applyFilters()">
+        <option value="">All</option>
+        <option [value]="true">Active</option>
+        <option [value]="false">Inactive</option>
+      </select>
+    </label>
+  </div>
+
+  <!-- Degree Table -->
+  <table>
+    <thead>
+      <tr>
+        <th (click)="sortBy('name')">Name</th>
+        <th (click)="sortBy('code')">Code</th>
+        <th (click)="sortBy('yearsToComplete')">Years to Complete</th>
+        <th (click)="sortBy('active')">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let degree of filteredDegrees">
+        <td>{{ degree.name }}</td>
+        <td>{{ degree.code }}</td>
+        <td>{{ degree.yearsToComplete }}</td>
+        <td>{{ degree.active ? "Yes" : "No" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,83 @@
+<div class="student-list">
+  <div class="header">
+    <h1>Student List</h1>
+    <button class="add-student" routerLink="/students/create">
+      Add New Student
+    </button>
+  </div>
+
+  <div class="controls">
+    <label>
+      Filter by Name/ID:
+      <input
+        type="text"
+        [(ngModel)]="filters.nameOrId"
+        (input)="applyFilters()"
+      />
+    </label>
+    <label>
+      Filter by Degree:
+      <select [(ngModel)]="filters.degree" (change)="applyFilters()">
+        <option value="">All Degrees</option>
+        <option *ngFor="let degree of degrees" [value]="degree.name">
+          {{ degree.name }}
+        </option>
+      </select>
+    </label>    
+    <label>
+      Filter by Year:
+      <select [(ngModel)]="filters.year" (change)="applyFilters()">
+        <option value="">All Years</option>
+        <option *ngFor="let year of [1, 2, 3, 4]" [value]="year">
+          {{ year }}
+        </option>
+      </select>
+    </label>
+    <label>
+      Display Name Format:
+      <select [(ngModel)]="nameDisplayFormat" (change)="applyFilters()">
+        <option value="firstLast">FirstName LastName</option>
+        <option value="lastFirst">LastName, FirstName</option>
+      </select>
+    </label>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th (click)="sortBy('studentId')">Student ID</th>
+        <th (click)="sortBy('name')">Name</th>
+        <th (click)="sortBy('degree')">Degree</th>
+        <th (click)="sortBy('year')">Year</th>
+        <th (click)="sortBy('email')">Email</th>
+        <th (click)="sortBy('averageGrade')">Avg Grade %</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of paginatedStudents">
+        <td>{{ student.studentId }}</td>
+        <td>{{ formatName(student) }}</td>
+        <td>{{ student.degree }}</td>
+        <td>{{ student.year }}</td>
+        <td>{{ student.email }}</td>
+        <td>{{ student.averageGrade || "N/A" }}</td>
+        <td>
+          <button (click)="viewStudent(student.id)">View</button>
+          <button (click)="editStudent(student.id)">Edit</button>
+          <button (click)="deleteStudent(student.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagination">
+    <button (click)="previousPage()" [disabled]="currentPage === 1">
+      Previous
+    </button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">
+      Next
+    </button>
+  </div>
+</div>

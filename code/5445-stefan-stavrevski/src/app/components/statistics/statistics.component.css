@@ -1,0 +1,77 @@
+.statistics {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--background-light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.statistics h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.statistics section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--primary-light);
+  border-radius: var(--border-radius);
+  background-color: var(--light);
+  box-shadow: var(--shadow-sm);
+}
+
+.statistics section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.statistics p {
+  font-size: 1.25rem;
+  color: var(--dark);
+  font-weight: bold;
+}
+
+.statistics ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.statistics ul li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--primary-light);
+  color: var(--dark);
+  font-size: 1.1rem;
+}
+
+.statistics ul li:last-child {
+  border-bottom: none;
+}
+
+.statistics ul li span {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .statistics {
+    padding: 1.5rem;
+  }
+
+  .statistics section {
+    padding: 1rem;
+  }
+
+  .statistics h1 {
+    font-size: 2rem;
+  }
+
+  .statistics section h2 {
+    font-size: 1.5rem;
+  }
+}

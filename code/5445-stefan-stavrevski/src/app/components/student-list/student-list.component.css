@@ -1,0 +1,153 @@
+.student-list {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--background-light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.student-list .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.student-list .header h1 {
+  font-size: 2rem;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.student-list .header .add-student {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: var(--light);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.student-list .header .add-student:hover {
+  background-color: var(--primary-light);
+}
+
+.student-list .controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.student-list .controls label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  color: var(--dark);
+}
+
+.student-list .controls input,
+.student-list .controls select {
+  padding: 0.5rem;
+  border: 1px solid var(--primary-light);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+.student-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.student-list table th,
+.student-list table td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid var(--primary-light);
+}
+
+.student-list table th {
+  background-color: var(--primary);
+  color: var(--light);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.student-list table th:hover {
+  background-color: var(--primary-light);
+}
+
+.student-list table td {
+  color: var(--dark);
+}
+
+.student-list table td button {
+  padding: 0.5rem 0.75rem;
+  margin-right: 0.5rem;
+  background-color: var(--primary);
+  color: var(--light);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.student-list table td button:hover {
+  background-color: var(--primary-light);
+}
+
+.student-list .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.student-list .pagination button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: var(--light);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.student-list .pagination button:hover {
+  background-color: var(--primary-light);
+}
+
+.student-list .pagination span {
+  font-size: 1.1rem;
+  color: var(--dark);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .student-list {
+    padding: 1.5rem;
+  }
+
+  .student-list .header h1 {
+    font-size: 1.75rem;
+  }
+
+  .student-list .header .add-student {
+    font-size: 0.9rem;
+  }
+
+  .student-list .controls {
+    flex-direction: column;
+  }
+
+  .student-list table th,
+  .student-list table td {
+    font-size: 0.9rem;
+  }
+
+  .student-list .pagination button {
+    font-size: 0.9rem;
+  }
+}

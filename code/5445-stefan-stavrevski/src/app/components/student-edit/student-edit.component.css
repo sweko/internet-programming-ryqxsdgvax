@@ -1,0 +1,113 @@
+.student-edit {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.student-edit h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.student-edit section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--primary-light);
+  border-radius: var(--border-radius);
+  background-color: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.student-edit section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.student-edit label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.student-edit input,
+.student-edit select {
+  padding: 0.5rem;
+  border: 1px solid var(--primary-light);
+  border-radius: var(--border-radius);
+  margin-top: 0.5rem;
+}
+
+.student-edit small {
+  color: var(--danger);
+  font-size: 0.875rem;
+}
+
+.student-edit table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-edit table th,
+.student-edit table td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid var(--primary-light);
+}
+
+.student-edit table th {
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+.student-edit table td {
+  background-color: var(--white);
+}
+
+.student-edit .actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.student-edit .actions button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: var(--light);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.student-edit .actions button:hover {
+  background-color: var(--primary-light);
+}
+
+.student-edit .actions button:disabled {
+  background-color: var(--primary-light);
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .student-edit {
+    padding: 1rem;
+  }
+
+  .student-edit h1 {
+    font-size: 1.5rem;
+  }
+
+  .student-edit section h2 {
+    font-size: 1.25rem;
+  }
+
+  .student-edit .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
