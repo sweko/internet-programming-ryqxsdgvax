@@ -1,0 +1,35 @@
+<div class="student-list">
+    <h1>Student List</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>Degree</th>
+          <th>Year</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students | slice: (currentPage - 1) * 10 : currentPage * 10">
+          <td>{{ student.id }}</td>
+          <td>{{ student.firstName }} {{ student.lastName }}</td>
+          <td>{{ student.degree }}</td>
+          <td>{{ student.year }}</td>
+          <td>{{ student.email }}</td>
+          <td>
+            <button (click)="onDeleteStudent(student)">Delete</button>
+            <button routerLink="/students/{{ student.id }}">View</button>
+            <button routerLink="/students/{{ student.id }}/edit">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pagination">
+      <button *ngFor="let page of [].constructor(totalPages); let i = index" 
+              (click)="onPageChange(i + 1)">
+        {{ i + 1 }}
+      </button>
+    </div>
+  </div>
