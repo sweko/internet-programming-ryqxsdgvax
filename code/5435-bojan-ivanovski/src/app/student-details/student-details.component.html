@@ -1,0 +1,42 @@
+<div *ngIf="student" class="container mt-4">
+    <h2>Student Details</h2>
+    <div class="personal-info mb-4">
+      <h4>Personal Information</h4>
+      <p><strong>Student ID:</strong> {{ student.studentId }}</p>
+      <p><strong>Full Name:</strong> {{ student.firstName }} {{ student.lastName }}</p>
+      <p><strong>Date of Birth:</strong> {{ student.dateOfBirth }}</p>
+      <p><strong>Email:</strong> {{ student.email }}</p>
+      <p><strong>Degree:</strong> {{ student.degree }}</p>
+      <p><strong>Year of Study:</strong> {{ student.year }}</p>
+    </div>
+  
+    <div class="academic-info mb-4">
+      <h4>Academic Information</h4>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Course Name</th>
+            <th>Year of Study</th>
+            <th>Semester</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let course of student.courses">
+                <td>{{ course.code }}</td>
+                <td>{{ getCourseYear(course.code) }}</td>
+                <td>{{ course.semester }}</td>
+                <td>{{ course.grade ? course.grade.letter : 'Not Graded' }}</td>
+              </tr>
+        </tbody>
+      </table>
+      <p><strong>Average Grade:</strong> {{ calculateAverageGrade() }}</p>
+      <p><strong>Success Rate:</strong> {{ calculateSuccessRate() }}</p>
+    </div>
+  
+    <div class="actions">
+      <button class="btn btn-primary" (click)="editStudent()">Edit</button>
+      <button class="btn btn-danger" (click)="deleteStudent()">Delete</button>
+      <button class="btn btn-secondary" (click)="backToList()">Back to List</button>
+    </div>
+  </div>
