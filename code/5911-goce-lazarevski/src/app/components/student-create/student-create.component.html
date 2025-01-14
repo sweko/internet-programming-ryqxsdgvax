@@ -1,0 +1,98 @@
+<div class="container">
+    <h2>Create Student</h2>
+    <form (ngSubmit)="onSubmit()" [formGroup]?="studentForm">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input
+          type="text"
+          id="firstName"
+          class="form-control"
+          formControlName="firstName"
+          placeholder="Enter first name"
+        />
+        <div *ngIf="studentForm?.get('firstName')?.invalid && studentForm?.get('firstName')?.touched" class="text-danger">
+          First name is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input
+          type="text"
+          id="lastName"
+          class="form-control"
+          formControlName="lastName"
+          placeholder="Enter last name"
+        />
+        <div *ngIf="studentForm?.get('lastName')?.invalid && studentForm?.get('lastName')?.touched" class="text-danger">
+          Last name is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="studentId">Student ID</label>
+        <input
+          type="text"
+          id="studentId"
+          class="form-control"
+          formControlName="studentId"
+          placeholder="Enter student ID (YYYY-NNNN)"
+        />
+        <div *ngIf="studentForm?.get('studentId')?.invalid && studentForm?.get('studentId')?.touched" class="text-danger">
+          Student ID is required and should be in the format YYYY-NNNN.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="dateOfBirth">Date of Birth</label>
+        <input
+          type="date"
+          id="dateOfBirth"
+          class="form-control"
+          formControlName="dateOfBirth"
+        />
+        <div *ngIf="studentForm?.get('dateOfBirth')?.invalid && studentForm?.get('dateOfBirth')?.touched" class="text-danger">
+          Date of Birth is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          formControlName="email"
+          placeholder="Enter email"
+        />
+        <div *ngIf="studentForm?.get('email')?.invalid && studentForm?.get('email')?.touched" class="text-danger">
+          A valid email is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="degree">Degree</label>
+        <select id="degree" class="form-control" formControlName="degree">
+          <option *ngFor="let degree of degrees" [value]="degree.name">{{ degree.name }}</option>
+        </select>
+        <div *ngIf="studentForm?.get('degree')?.invalid && studentForm?.get('degree')?.touched" class="text-danger">
+          Degree is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="year">Year of Study</label>
+        <select id="year" class="form-control" formControlName="year">
+          <option *ngFor="let year of [1, 2, 3, 4]" [value]="year">{{ year }}</option>
+        </select>
+        <div *ngIf="studentForm?.get('year')?.invalid && studentForm?.get('year')?.touched" class="text-danger">
+          Year of study is required.
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="studentForm?.invalid" class="btn btn-primary">
+          Create Student
+      </button>
+    </form>
+</div>
+ 
