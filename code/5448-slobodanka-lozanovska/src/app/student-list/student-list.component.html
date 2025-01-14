@@ -1,0 +1,148 @@
+<div class="container mx-auto p-4">
+    <div class="flex justify-between items-center mb-4">
+      <h1 class="text-2xl font-bold">Students (Total: {{ totalStudents }})</h1>
+      <button routerLink="/students/create" class="bg-blue-500 text-white px-4 py-2 rounded">
+        Add New Student
+      </button>
+    </div>
+  
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+      
+      <div>
+        <input
+          type="text"
+          [(ngModel)]="searchTerm"
+          (ngModelChange)="applyFilters()"
+          placeholder="Search by ID or Name"
+          class="w-full p-2 border rounded"
+        />
+      </div>
+  
+      
+      <div>
+        <select
+          [(ngModel)]="selectedDegree"
+          (ngModelChange)="applyFilters()"
+          class="w-full p-2 border rounded"
+        >
+          <option value="">All Degrees</option>
+          <option *ngFor="let degree of degrees" [value]="degree">
+            {{ degree }}
+          </option>
+        </select>
+      </div>
+  
+      
+      <div>
+        <select
+          [(ngModel)]="selectedYears"
+          (ngModelChange)="applyFilters()"
+          multiple
+          class="w-full p-2 border rounded"
+        >
+          <option *ngFor="let year of [1, 2, 3, 4]" [value]="year">
+            Year {{ year }}
+          </option>
+        </select>
+      </div>
+  
+      
+      <div class="grid grid-cols-2 gap-2">
+        <input
+          type="number"
+          [(ngModel)]="gradeRange.min"
+          (ngModelChange)="applyFilters()"
+          placeholder="Min Grade %"
+          min="0"
+          max="100"
+          class="w-full p-2 border rounded"
+        />
+        <input
+          type="number"
+          [(ngModel)]="gradeRange.max"
+          (ngModelChange)="applyFilters()"
+          placeholder="Max Grade %"
+          min="0"
+          max="100"
+          class="w-full p-2 border rounded"
+        />
+      </div>
+    </div>
+  
+    
+    <div class="mb-4">
+      <button
+        (click)="toggleNameFormat()"
+        class="bg-gray-200 px-4 py-2 rounded"
+      >
+        Toggle Name Format: {{ nameDisplayFormat === 'firstLast' ? 'First Last' : 'Last, First' }}
+      </button>
+    </div>
+  
+    
+    <div class="overflow-x-auto">
+      <table class="w-full border-collapse border">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="p-2 border cursor-pointer" (click)="sort('studentId')">
+              Student ID {{ getSortIcon('studentId') }}
+            </th>
+            <th class="p-2 border cursor-pointer" (click)="sort('firstName')">
+              Name {{ getSortIcon('firstName') }}
+            </th>
+            <th class="p-2 border cursor-pointer" (click)="sort('degree')">
+              Degree {{ getSortIcon('degree') }}
+            </th>
+            <th class="p-2 border cursor-pointer" (click)="sort('year')">
+              Year {{ getSortIcon('year') }}
+            </th>
+            <th class="p-2 border cursor-pointer" (click)="sort('email')">
+              Email {{ getSortIcon('email') }}
+            </th>
+            <th class="p-2 border cursor-pointer" (click)="sort('averageGrade')">
+              Average Grade {{ getSortIcon('averageGrade') }}
+            </th>
+            <th class="p-2 border">Number of Courses</th>
+            <th class="p-2 border">Number of Grades</th>
+            <th class="p-2 border">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of displayStudents">
+            <td class="p-2 border">{{ student.studentId }}</td>
+            <td class="p-2 border">{{ getDisplayName(student) }}</td>
+            <td class="p-2 border">{{ student.degree }}</td>
+            <td class="p-2 border">Year {{ student.year }}</td>
+            <td class="p-2 border">{{ student.email }}</td>
+            <td class="p-2 border">
+              {{ calculateAverageGrade(student).percentage || 'N/A' }}% ({{ calculateAverageGrade(student).letter }})
+            </td>
+            <td class="p-2 border">{{ student.courses.length }}</td>
+            <td class="p-2 border">{{ getGradedCoursesCount(student) }}</td>
+            <td class="p-2 border">
+              <button
+                class="bg-red-500 text-white px-2 py-1 rounded"
+                (click)="deleteStudent(student.id)"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Pagination -->
+    <div class="flex justify-center mt-4">
+      <button
+        *ngFor="let page of pagesArray"
+        class="px-3 py-1 border rounded mx-1"
+        [class.bg-blue-500]="currentPage === page"
+        [class.text-white]="currentPage === page"
+        (click)="onPageChange(page)"
+      >
+        {{ page }}
+      </button>
+    </div>
+  </div>
+  
