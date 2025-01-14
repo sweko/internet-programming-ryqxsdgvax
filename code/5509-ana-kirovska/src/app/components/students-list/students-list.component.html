@@ -1,13 +1,20 @@
 <h2>Student List</h2>
 <table>
-  <tr>
-    <th>Student ID</th>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Degree</th>
-    <th>Year</th>
-    <th>Actions</th>
-  </tr>
+    <div class="">
+        <div class="">
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Degree</th>
+                <th>Year</th>
+                <th>Actions</th>
+              </tr>
+        </div>
+        <div class="">
+            <button>Add Student</button>
+        </div>
+    </div>
   <tr *ngFor="let student of students">
     <td>{{ student.studentId }}</td>
     <td>{{ student.firstName }} {{ student.lastName }}</td>
@@ -21,4 +28,3 @@
     </td>
   </tr>
 </table>
-<button>Add Student</button>

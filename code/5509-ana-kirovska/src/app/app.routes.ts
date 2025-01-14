@@ -14,4 +14,5 @@ export const routes: Routes = [
     {path:'students/:id/edit',component:UpdateStudentComponent},
     {path:'statistics',component:StatisticsComponent},
     {path:'about',component:AboutComponent},
+    
 ];
