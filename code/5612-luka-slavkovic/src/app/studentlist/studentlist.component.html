@@ -1,0 +1,31 @@
+<div class="search-container">
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      placeholder="Search students..."
+      (input)="onSearchChange()"
+      class="search-input"
+    />
+  </div>
+  
+  <table class="student-table">
+    <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Program</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of filteredStudents; let i = index">
+        <td>{{ student.firstName }} {{ student.lastName }}</td>
+        <td>{{ student.degree }}</td>
+        <td>
+          <a [routerLink]="['/students', student.id]" class="view-link">View</a>
+          <a [routerLink]="['/students', student.id, 'edit']" class="edit-link">Edit</a>
+          <button (click)="removeStudent(student.id)" class="delete-button">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

@@ -1,0 +1,48 @@
+
+.student-list-container {
+    margin: 20px;
+  }
+  
+  
+  .student-search {
+    margin-bottom: 15px;
+  }
+  
+  .search-box {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px; 
+  }
+  
+  .student-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .student-table th,
+  .student-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .student-table th {
+    background-color: #f2f2f2;
+  }
+  
+  
+  .action-link {
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 10px;
+  }
+  
+  
+  .action-button {
+    background-color: #dc3545; 
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
