@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms'; // Import ReactiveFormsModule
+import { CommonModule } from '@angular/common'; // Import CommonModule
 
 @Component({
   standalone: true, // Marking the component as standalone
