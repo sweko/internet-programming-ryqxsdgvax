@@ -1,0 +1,140 @@
+<div class="student-list-container">
+  <div class="controls">
+    <h1>Students</h1>
+    <button class="btn-primary" routerLink="create">Add New Student</button>
+  </div>
+
+  <div class="filters">
+    <div class="search-box">
+      <input 
+        type="text" 
+        [(ngModel)]="searchTerm" 
+        (ngModelChange)="applyFilters()"
+        placeholder="Search by ID or name..."
+      >
+    </div>
+
+    <div class="filter-group">
+      <select [(ngModel)]="selectedDegree" (ngModelChange)="applyFilters()">
+        <option value="">All Degrees</option>
+        @for (degree of degrees; track degree.code) {
+          <option [value]="degree.code">{{degree.name}}</option>
+        }
+      </select>
+
+      <div class="year-filter">
+        @for (year of [1,2,3,4]; track year) {
+          <label>
+            <input 
+              type="checkbox" 
+              [checked]="selectedYears.includes(year)"
+              (change)="toggleYear(year)"
+            >
+            Year {{year}}
+          </label>
+        }
+      </div>
+
+      <div class="grade-filter">
+        <div class="grade-input">
+          <label>Min Grade</label>
+          <input 
+            type="number" 
+            [(ngModel)]="minGrade" 
+            (ngModelChange)="applyFilters()"
+            placeholder="Min %"
+            min="0"
+            max="100"
+          >
+          <select 
+            [(ngModel)]="minLetterGrade" 
+            (ngModelChange)="onMinLetterGradeChange()"
+          >
+            <option value="">Min Letter</option>
+            @for (grade of letterGrades; track grade) {
+              <option [value]="grade">{{grade}}</option>
+            }
+          </select>
+        </div>
+        <div class="grade-input">
+          <label>Max Grade</label>
+          <input 
+            type="number" 
+            [(ngModel)]="maxGrade" 
+            (ngModelChange)="applyFilters()"
+            placeholder="Max %"
+            min="0"
+            max="100"
+          >
+          <select 
+            [(ngModel)]="maxLetterGrade" 
+            (ngModelChange)="onMaxLetterGradeChange()"
+          >
+            <option value="">Max Letter</option>
+            @for (grade of letterGrades; track grade) {
+              <option [value]="grade">{{grade}}</option>
+            }
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-secondary" (click)="toggleNameFormat()">
+      Toggle Name Format
+    </button>
+  </div>
+
+  <table class="student-table">
+    <thead>
+      <tr>
+        <th (click)="onSort('studentId')">Student ID</th>
+        <th (click)="onSort('firstName')">Name</th>
+        <th (click)="onSort('degree')">Degree</th>
+        <th (click)="onSort('year')">Year</th>
+        <th (click)="onSort('email')">Email</th>
+        <th (click)="onSort('averageGrade')">Average Grade</th>
+        <th>Courses</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (student of paginatedStudents; track student.id) {
+        <tr>
+          <td>{{student.studentId}}</td>
+          <td>{{studentUtils.getFullName(student, lastNameFirst)}}</td>
+          <td>{{student.degree}}</td>
+          <td>{{student.year}}</td>
+          <td>{{student.email}}</td>
+          <td>
+            @if (studentUtils.calculateAverageGrade(student); as avg) {
+              {{avg}}% ({{studentUtils.getLetterGrade(avg)}})
+            } @else {
+              N/A
+            }
+          </td>
+          <td>
+            {{student.courses.length}} 
+            ({{getGradedCoursesCount(student)}} graded)
+          </td>
+          <td class="actions">
+            <button class="btn-icon" [routerLink]="[student.id]">View</button>
+            <button class="btn-icon" [routerLink]="[student.id, 'edit']">Edit</button>
+            <button class="btn-icon danger" (click)="onDelete(student)">Delete</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  <div class="pagination">
+    <button 
+      [disabled]="currentPage === 1"
+      (click)="currentPage = currentPage - 1"
+    >Previous</button>
+    <span>Page {{currentPage}} of {{totalPages}} ({{filteredStudents.length}} total students)</span>
+    <button 
+      [disabled]="currentPage === totalPages"
+      (click)="currentPage = currentPage + 1"
+    >Next</button>
+  </div>
+</div> 

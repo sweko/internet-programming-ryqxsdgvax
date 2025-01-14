@@ -1,0 +1,61 @@
+<div class="statistics-container">
+  @if (loading) {
+    <div class="loading">Loading statistics...</div>
+  } @else if (error) {
+    <div class="error">
+      <p>Error loading statistics.</p>
+      <button class="btn-primary" routerLink="/students">Back to List</button>
+    </div>
+  } @else {
+    <h1>Statistics</h1>
+
+    <div class="stats-grid">
+      <section class="stat-card">
+        <h2>General Statistics</h2>
+        <div class="stat-item">
+          <label>Total Students</label>
+          <span class="stat-value">{{totalStudents}}</span>
+        </div>
+        <div class="stat-item">
+          <label>Average Grade</label>
+          <span class="stat-value">{{averageGrade}}%</span>
+        </div>
+      </section>
+
+      <section class="stat-card">
+        <h2>Students per Degree</h2>
+        @for (degree of studentsPerDegree | keyvalue; track degree.key) {
+          <div class="stat-item">
+            <label>{{degree.key}}</label>
+            <span class="stat-value">{{degree.value}}</span>
+          </div>
+        }
+      </section>
+
+      <section class="stat-card">
+        <h2>Students per Year</h2>
+        @for (year of studentsPerYear | keyvalue; track year.key) {
+          <div class="stat-item">
+            <label>Year {{year.key}}</label>
+            <span class="stat-value">{{year.value}}</span>
+          </div>
+        }
+      </section>
+
+      <section class="stat-card">
+        <h2>Course Pass Rates</h2>
+        @for (course of coursePassRates | keyvalue; track course.key) {
+          <div class="stat-item">
+            <label>{{course.key}}</label>
+            <span class="stat-value">{{course.value}}%</span>
+          </div>
+        }
+      </section>
+
+      <section class="stat-card">
+        <h2>Grade Distribution</h2>
+        <canvas id="gradeChart"></canvas>
+      </section>
+    </div>
+  }
+</div> 

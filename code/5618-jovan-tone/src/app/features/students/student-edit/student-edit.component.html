@@ -1,0 +1,119 @@
+<div class="student-edit-container">
+  @if (loading) {
+    <div class="loading">Loading student details...</div>
+  } @else if (error) {
+    <div class="error">
+      <p>Error loading student details.</p>
+      <button class="btn-primary" routerLink="/students">Back to List</button>
+    </div>
+  } @else {
+    <div class="header">
+      <h1>Edit Student</h1>
+      <button class="btn-secondary" routerLink="/students">Back to List</button>
+    </div>
+
+    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()" class="edit-form">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input 
+          id="firstName"
+          type="text"
+          formControlName="firstName"
+          [class.invalid]="studentForm.get('firstName')?.invalid && 
+            studentForm.get('firstName')?.touched"
+        >
+        @if (studentForm.get('firstName')?.invalid && studentForm.get('firstName')?.touched) {
+          <div class="error-message">First name is required</div>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input 
+          id="lastName"
+          type="text"
+          formControlName="lastName"
+          [class.invalid]="studentForm.get('lastName')?.invalid && 
+            studentForm.get('lastName')?.touched"
+        >
+        @if (studentForm.get('lastName')?.invalid && studentForm.get('lastName')?.touched) {
+          <div class="error-message">Last name is required</div>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input 
+          id="email"
+          type="email"
+          formControlName="email"
+          [class.invalid]="studentForm.get('email')?.invalid && 
+            studentForm.get('email')?.touched"
+        >
+        @if (studentForm.get('email')?.invalid && studentForm.get('email')?.touched) {
+          <div class="error-message">
+            @if (studentForm.get('email')?.errors?.['required']) {
+              Email is required
+            } @else if (studentForm.get('email')?.errors?.['email']) {
+              Please enter a valid email address
+            }
+          </div>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="degree">Degree</label>
+        <select 
+          id="degree"
+          formControlName="degree"
+          [class.invalid]="studentForm.get('degree')?.invalid && 
+            studentForm.get('degree')?.touched"
+        >
+          <option value="">Select a degree</option>
+          @for (degree of degrees; track degree.code) {
+            <option [value]="degree.code">{{degree.name}}</option>
+          }
+        </select>
+        @if (studentForm.get('degree')?.invalid && studentForm.get('degree')?.touched) {
+          <div class="error-message">Degree is required</div>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="year">Year of Study</label>
+        <input 
+          id="year"
+          type="number"
+          formControlName="year"
+          min="1"
+          max="4"
+          [class.invalid]="studentForm.get('year')?.invalid && 
+            studentForm.get('year')?.touched"
+        >
+        @if (studentForm.get('year')?.invalid && studentForm.get('year')?.touched) {
+          <div class="error-message">
+            Year must be between 1 and 4
+          </div>
+        }
+      </div>
+
+      <div class="form-actions">
+        <button 
+          type="submit" 
+          class="btn-primary"
+          [disabled]="studentForm.invalid || saving"
+        >
+          {{saving ? 'Saving...' : 'Save Changes'}}
+        </button>
+        <button 
+          type="button" 
+          class="btn-secondary"
+          routerLink="/students"
+          [disabled]="saving"
+        >
+          Cancel
+        </button>
+      </div>
+    </form>
+  }
+</div> 

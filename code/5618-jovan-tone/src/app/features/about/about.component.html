@@ -1,0 +1,32 @@
+<div class="about-container">
+  <h1>About</h1>
+  
+  <div class="about-content">
+    <section class="student-info">
+      <h2>Student Information</h2>
+      <div class="info-item">
+        <label>Name:</label>
+        <span>{{studentName}}</span>
+      </div>
+      <div class="info-item">
+        <label>Student ID:</label>
+        <span>{{studentId}}</span>
+      </div>
+      <div class="info-item">
+        <label>Year:</label>
+        <span>{{currentYear}}</span>
+      </div>
+    </section>
+
+    <section class="project-info">
+      <h2>Project Repository</h2>
+      <p>
+        This project was created as part of the Internet Programming course final exam.
+        You can find the source code on GitHub:
+      </p>
+      <a [href]="githubRepo" target="_blank" class="github-link">
+        View on GitHub
+      </a>
+    </section>
+  </div>
+</div> 

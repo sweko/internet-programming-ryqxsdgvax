@@ -1,0 +1,81 @@
+<div class="student-details-container">
+  @if (loading) {
+    <div class="loading">Loading student details...</div>
+  } @else if (error) {
+    <div class="error">Error loading student details.</div>
+  } @else if (student) {
+    <div class="header">
+      <button class="btn-secondary" routerLink="/students">Back to List</button>
+    </div>
+
+    <div class="details-container">
+      <div class="details-group">
+        <h2>Personal Information</h2>
+        <div class="details-item">
+          <label>Student ID:</label>
+          <span>{{student.studentId}}</span>
+        </div>
+        <div class="details-item">
+          <label>Name:</label>
+          <span>{{studentUtils.getFullName(student)}}</span>
+        </div>
+        <div class="details-item">
+          <label>Email:</label>
+          <span>{{student.email}}</span>
+        </div>
+        <div class="details-item">
+          <label>Date of Birth:</label>
+          <span>{{student.dateOfBirth | date}}</span>
+        </div>
+      </div>
+
+      <div class="details-group">
+        <h2>Academic Information</h2>
+        <div class="details-item">
+          <label>Degree:</label>
+          <span>{{student.degree}}</span>
+        </div>
+        <div class="details-item">
+          <label>Year:</label>
+          <span>Year {{student.year}}</span>
+        </div>
+        <div class="details-item">
+          <label>Average Grade:</label>
+          <span>
+            @if (studentUtils.calculateAverageGrade(student); as avg) {
+              {{avg}}% ({{studentUtils.getLetterGrade(avg)}})
+            } @else {
+              N/A
+            }
+          </span>
+        </div>
+      </div>
+
+      <div class="details-group">
+        <h2>Courses</h2>
+        <div class="course-list">
+          @for (course of student.courses; track course.code) {
+            <div class="course-item">
+              <div class="course-info">
+                <strong>{{course.code}}</strong>
+                <span class="semester">({{course.semester}})</span>
+              </div>
+              @if (course.grade) {
+                <div class="grade">
+                  {{course.grade.percentage}}% ({{course.grade.letter}})
+                </div>
+              } @else {
+                <div class="not-graded">Not Graded</div>
+              }
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn-secondary" [routerLink]="['edit']">Edit</button>
+        <button class="btn-danger" (click)="onDelete()">Delete</button>
+      </div>
+    </div>
+  }
+</div> 
