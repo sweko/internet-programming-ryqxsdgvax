@@ -1,0 +1,33 @@
+<div>
+  <h1>Student List</h1>
+  <button routerLink="/students/create">Add Student</button>
+  <table>
+    <thead>
+      <tr>
+        <th>Student ID</th>
+        <th>Name</th>
+        <th>Degree</th>
+        <th>Year</th>
+        <th>Email</th>
+        <th>Average Grade</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <td>{{ student.studentId }}</td>
+        <td>{{ student.firstName }} {{ student.lastName }}</td>
+        <td>{{ student.degree }}</td>
+        <td>{{ student.year }}</td>
+        <td>{{ student.email }}</td>
+        <td>{{ student.averageGrade }}</td>
+        <td>
+          <button (click)="viewStudent(student.id)">View</button>
+          <button (click)="editStudent(student.id)">Edit</button>
+          <button (click)="deleteStudent(student.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
