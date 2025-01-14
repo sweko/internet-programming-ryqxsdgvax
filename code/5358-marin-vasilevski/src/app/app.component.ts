@@ -1,49 +1,43 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { RouterModule, RouterOutlet } from '@angular/router';
-import { delay, Observable, Subject, takeUntil } from 'rxjs';
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [RouterModule],
+  template: `
+    <header>
+      <nav>
+        <a routerLink="/students">Home</a>
+        <a routerLink="/degrees">Degrees</a>
+        <a routerLink="/courses">Courses</a>
+        <a routerLink="/statistics">Statistics</a>
+        <a routerLink="/about">About</a>
+      </nav>
+    </header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  `,
+  styles: [`
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+  `],
 })
-export class AppComponent implements OnInit {
-  // This file should be refactored, feel free to move the code around, create new files, or delete it altogether.
-  currentYear: number = 0;
-
-  welcomeMessage = 'Welcome to the Student Management System!';
-  statusMessage = 'Checking data connection...';
-
-  routes = [
-    { linkName: 'Students' , url: '/students' },
-    { linkName: 'Degrees', url: '/degrees' },
-    { linkName: 'Courses', url: '/courses' },
-    { linkName: 'Statistics', url: '/statistics' }
-  ];
-
-  private dataTest: Observable<any>;
-
-  // Should this http be here or in a separate file?
-  constructor(private http: HttpClient) { 
-    this.dataTest = this.http.get('http://localhost:3000', {responseType: "text"}).pipe(delay(1000), takeUntilDestroyed());
+export class AppComponent {
+  title(arg0: string, title: any) {
+    throw new Error('Method not implemented.');
   }
-
-
-  ngOnInit() {
-    this.currentYear = new Date().getFullYear();
-
-    this.dataTest.subscribe({
-      next: _ => {
-        this.statusMessage = 'Data connection is working!';
-      },
-      error: (error) => {
-        this.statusMessage = `Data connection failed (see console for details)! ${error.message}`;
-        console.error(error);
-      }
-    });
-  }
-
 }

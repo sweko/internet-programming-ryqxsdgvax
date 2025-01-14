@@ -1,0 +1,36 @@
+div {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #1976d2;
+  }
+  
+  p {
+    margin: 10px 0;
+    color: #333;
+    font-size: 1.1rem;
+  }
+  
+  button {
+    display: inline-block;
+    margin: 10px 5px 0 0;
+    padding: 10px 20px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #125a9b;
+  }
+  

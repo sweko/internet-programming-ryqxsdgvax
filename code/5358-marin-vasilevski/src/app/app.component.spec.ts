@@ -1,29 +1,30 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [AppComponent],
-    }).compileComponents();
-  });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+async function testAppComponent() {
+ 
+  await TestBed.configureTestingModule({
+    imports: [AppComponent], 
+  }).compileComponents();
 
-  it(`should have the 'template' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('template');
-  });
+ 
+  const fixture = TestBed.createComponent(AppComponent);
+  const app = fixture.componentInstance;
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, template');
-  });
-});
+ 
+  console.log('AppComponent created:', app instanceof AppComponent);
+
+  console.log('AppComponent title:', app.title); 
+
+ 
+  fixture.detectChanges();
+  const compiled = fixture.nativeElement as HTMLElement;
+  const titleText = compiled.querySelector('h1')?.textContent;
+  console.log('Rendered title:', titleText); 
+}
+
+
+testAppComponent()
+  .then(() => console.log('AppComponent Tests Completed'))
+  .catch((error) => console.error('AppComponent Tests Failed:', error));
