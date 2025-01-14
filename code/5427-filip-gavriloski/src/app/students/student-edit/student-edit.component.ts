@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms'; // Import ReactiveFormsModule
@@ -43,7 +43,7 @@ import { CommonModule } from '@angular/common'; // Import CommonModule
         Year must be between 1 and 4.
       </div>
 
-      <button type="submit" [disabled]="studentForm.invalid">Submit</button>
+      <button type="submit" [disabled]="studentForm.invalid">Save</button>
     </form>
 
     <h2>Assigned Courses</h2>
@@ -62,7 +62,7 @@ export class StudentEditComponent implements OnInit {
   studentId!: string; // Variable to hold the student ID
   assignedCourses: any[] = []; // Array to hold assigned courses
 
-  constructor(private fb: FormBuilder, private route: ActivatedRoute, private http: HttpClient) {}
+  constructor(private fb: FormBuilder, private route: ActivatedRoute, private http: HttpClient, private router: Router) {}
 
   ngOnInit() {
     this.studentForm = this.fb.group({
@@ -86,7 +86,11 @@ export class StudentEditComponent implements OnInit {
 
   onSubmit() {
     if (this.studentForm.valid) {
-      console.log(this.studentForm.value);
+      // Send PUT request to update student information
+      this.http.put(`/students/${this.studentId}`, this.studentForm.value).subscribe(() => {
+        // Navigate to the student details page after successful update
+        this.router.navigate([`/students/${this.studentId}`]);
+      });
     }
   }
 }
