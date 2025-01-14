@@ -1,0 +1,27 @@
+<table>
+    <tr>
+        <th><a style="cursor:pointer">Student ID</a></th>
+        <th><a style="cursor:pointer">Name</a></th>
+        <th><a style="cursor: pointer;">Date of birth</a></th>
+        <th><a style="cursor:pointer">Year</a></th>
+        <th><a style="cursor:pointer">Email</a></th>
+        <th><a style="cursor:pointer">Degree</a></th>
+        <th><a style="cursor:pointer">Years of study</a></th>
+                
+    </tr>
+        <tr>
+            <td>{{student.studentId}}</td>
+            <td>{{student.firstName}} {{student.lastName}}</td>
+            <td>{{student.dateOfBirth}}</td>
+            <td>{{student.year}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.degree}}</td>
+            <td>{{student.year}}</td>
+            <td style="display: flex;gap:10px">
+                <a [routerLink]="['/students', student.id]">View</a>
+                <a [routerLink]="['/students', student.id, 'edit']">Edit</a>
+                <a (click)="deleteStudent(student.id)" style="cursor: pointer;">Delete</a>
+            </td>
+        </tr>
+    
+</table>

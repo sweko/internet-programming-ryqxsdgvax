@@ -1,0 +1,50 @@
+<table>
+    <tr>
+        <th><a (click)="sort('studentId')" style="cursor:pointer">Student ID</a></th>
+        <th><a (click)="sort('firstName')" style="cursor:pointer">Name</a></th>
+        <th><a (click)="sort('degree')" style="cursor:pointer">Degree</a></th>
+        <th><a (click)="sort('year')" style="cursor:pointer">Year</a></th>
+        <th><a (click)="sort('email')" style="cursor:pointer">Email</a></th>
+        <th><a (click)="sort('averageGrade')" style="cursor:pointer">Average Grade</a></th>
+        <th><a (click)="sort('coursesCount')" style="cursor:pointer">Courses</a></th>
+        <th><a (click)="sort('gradesCount')" style="cursor:pointer">Grades</a></th>
+        <th>Actions</th>
+        <th>
+            <div>
+                <form [formGroup]="filterForm" (ngSubmit)="onSubmit()" style="display: flex; gap: 10px;">
+                    <label>Filter: </label>
+                    <input formControlName="name" type="text" placeholder="Name" style="text-align: center;">
+                    <select id="degree" formControlName="degree">
+                        <option value=""></option>
+                        <option *ngFor="let degree of degrees" [value]="degree">{{degree}}</option>
+                    </select>
+                    <label>Year:</label>
+                    <select id="year" formControlName="year">
+                        <option value=""></option>
+                        <option *ngFor="let year of [1,2,3,4]" [value]="year">{{year}}</option>
+                    </select>
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+        </th>
+    </tr>
+    @for (student of filteredStudents; track student.id) {
+        <tr>
+            <td>{{student.studentId}}</td>
+            <td>{{student.firstName}} {{student.lastName}}</td>
+            <td>{{student.degree}}</td>
+            <td>{{student.year}}</td>
+            <td>{{student.email}}</td>
+            <td>{{calculateAverageGrade(student)}}</td>
+            <td>{{getNumberOfCoursesWithGrade(student)}}</td>
+            <td>{{getNumberOfCoursesWithGrade(student)}}</td>
+            <td style="display: flex;gap:10px">
+                <a [routerLink]="['/students', student.id]">View</a>
+                <a [routerLink]="['/students', student.id, 'edit']">Edit</a>
+                <a (click)="deleteStudent(student.id)" style="cursor: pointer;">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<button style="width: 66.5%; background-color: #1a73e8; color: white; outline: none; border: none; padding: 7px; cursor: pointer;" [routerLink]="['/students/create']">Add New Student</button>
