@@ -1,0 +1,105 @@
+<div class="student-list-container">
+    <!-- Header -->
+    <h1>Student List</h1>
+    <div class="toolbar">
+      <!-- Filter and Sort -->
+      <div class="filters">
+        <input
+          type="text"
+          placeholder="Filter by Student ID or Name"
+          [(ngModel)]="filterStudentIdName"
+        />
+        <select [(ngModel)]="filterDegree">
+          <option value="">All Degrees</option>
+          <option *ngFor="let degree of degrees" [value]="degree.name">
+            {{ degree.name }}
+          </option>
+        </select>
+        <div>
+          <label>
+            Year:
+            <select multiple [(ngModel)]="filterYears">
+              <option *ngFor="let year of [1, 2, 3, 4]" [value]="year">
+                {{ year }}
+              </option>
+            </select>
+          </label>
+        </div>
+        <div>
+          <label>
+            Grade Range:
+            <input
+              type="number"
+              placeholder="Min"
+              [(ngModel)]="filterMinGrade"
+              min="0"
+              max="100"
+            />
+            <input
+              type="number"
+              placeholder="Max"
+              [(ngModel)]="filterMaxGrade"
+              min="0"
+              max="100"
+            />
+          </label>
+        </div>
+      </div>
+      <!-- Add Student -->
+      <button (click)="addStudent()">Add Student</button>
+    </div>
+  
+    <!-- Student List -->
+    <table>
+      <thead>
+        <tr>
+          <th (click)="toggleSort('studentId')">Student ID</th>
+          <th (click)="toggleSort('name')">Name</th>
+          <th (click)="toggleSort('degree')">Degree</th>
+          <th (click)="toggleSort('year')">Year</th>
+          <th (click)="toggleSort('email')">Email</th>
+          <th (click)="toggleSort('averageGrade')">Average Grade (%)</th>
+          <th (click)="toggleSort('letterGrade')">Average Letter Grade</th>
+          <th (click)="toggleSort('courses')">Number of Courses</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students">
+          <td>{{ student.studentId }}</td>
+          <td>{{ student.firstName }} {{ student.lastName }}</td> <!-- Use firstName and lastName here -->
+          <td>{{ student.degree }}</td>
+          <td>{{ student.year }}</td>
+          <td>{{ student.email }}</td>
+          <td>{{ calculateAverageGrade(student) }}</td>
+          <td>
+            {{ calculateLetterGrade(calculateAverageGrade(student)) }}
+          </td>
+          <td>{{ student.courses.length }}</td>
+          <td>
+            <button (click)="viewStudent(student.id)">View</button>
+            <button (click)="editStudent(student.id)">Edit</button>
+            <button (click)="deleteStudent(student.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Pagination -->
+    <div class="pagination">
+      <button (click)="page = page - 1" [disabled]="page === 1">Previous</button>
+      <span>Page {{ page }}</span>
+      <button
+        (click)="page = page + 1"
+        [disabled]="page * itemsPerPage >= totalStudents"
+      >
+        Next
+      </button>
+    </div>
+  
+    <!-- Total Students -->
+    <div class="total-students">
+      Total Students: {{ totalStudents }}
+    </div>
+  </div>
+  

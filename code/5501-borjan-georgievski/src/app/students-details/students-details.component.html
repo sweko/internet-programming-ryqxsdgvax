@@ -1,0 +1,46 @@
+<div class="student-details-container">
+    <h1>Student Details</h1>
+    
+    <!-- Personal Information Section -->
+    <div class="personal-info">
+      <h2>Personal Information</h2>
+      <p><strong>Student ID:</strong> {{ student?.studentId }}</p>
+      <p><strong>Full Name:</strong> {{ student?.firstName }} {{ student?.lastName }}</p>
+      <p><strong>Date of Birth:</strong> {{ student?.dateOfBirth | date }}</p>
+      <p><strong>Email:</strong> {{ student?.email }}</p>
+      <p><strong>Degree:</strong> {{ student?.degree }}</p>
+      <p><strong>Year of Study:</strong> {{ student?.year }}</p>
+    </div>
+  
+    <!-- Academic Information Section -->
+    <div class="academic-info">
+      <h2>Academic Information</h2>
+      <h3>Courses:</h3>
+      <ul>
+        <li *ngFor="let course of student?.courses">
+          <strong>Course Name:</strong> {{ course.name }}<br>
+          <strong>Year of Study:</strong> {{ course.yearOfStudy }}<br>
+          <strong>Semester:</strong> {{ course.semester }}<br>
+          <strong>Grade:</strong> 
+          <span *ngIf="course.grade">
+            {{ course.grade.letter }} ({{ course.grade.percentage }}%)
+          </span>
+          <span *ngIf="!course.grade">Not Graded</span>
+        </li>
+      </ul>
+  
+      <!-- Average Grade -->
+      <p><strong>Average Grade:</strong> {{ calculateAverageGrade() }}</p>
+  
+      <!-- Success Rate -->
+      <p><strong>Success Rate:</strong> {{ successRate() }}</p>
+    </div>
+  
+    <!-- Actions Section -->
+    <div class="actions">
+      <button (click)="editStudent()">Edit</button>
+      <button (click)="deleteStudent()">Delete</button>
+      <button (click)="goBack()">Back to List</button>
+    </div>
+  </div>
+  
