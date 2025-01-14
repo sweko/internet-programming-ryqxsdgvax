@@ -1,0 +1,13 @@
+<div *ngIf="studentForm">
+    <h2>Edit Student</h2>
+    <form [formGroup]="studentForm" (ngSubmit)="onSave()">
+      <label>First Name: <input formControlName="firstName" /></label>
+      <label>Last Name: <input formControlName="lastName" /></label>
+      <label>Email: <input formControlName="email" /></label>
+      <label>Degree: <input formControlName="degree" /></label>
+      <label>Year: <input type="number" formControlName="year" /></label>
+      <button type="submit" [disabled]="!studentForm.valid">Save</button>
+      <button routerLink="/students/{{ student?.id }}">Cancel</button>
+    </form>
+  </div>
+  
