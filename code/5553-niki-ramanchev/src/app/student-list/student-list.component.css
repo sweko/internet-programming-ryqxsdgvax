@@ -1,0 +1,178 @@
+/* General Container Styling */
+div {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styling */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Paragraph Styling */
+p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Button Styling */
+button {
+  background-color: #2a7ae4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #1b5bbd;
+}
+
+button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Filters Section */
+.filters {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #eef6fc;
+  border: 1px solid #cce3f5;
+  border-radius: 8px;
+}
+
+.filters label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+.filters input,
+.filters select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.filters select[multiple] {
+  height: 100px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead th {
+  background-color: #2a7ae4;
+  color: #fff;
+  text-align: left;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+thead th:hover {
+  background-color: #1b5bbd;
+}
+
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+  color: #555;
+}
+
+tbody tr:hover {
+  background-color: #f1faff;
+}
+
+/* Pagination Controls */
+.pagination-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-controls button {
+  margin: 0 10px;
+}
+
+.pagination-controls span {
+  font-size: 14px;
+  color: #444;
+}
+
+/* No Data Message */
+ng-template {
+  font-size: 16px;
+  color: #999;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tbody tr {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+
+  tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+  }
+
+  .filters label,
+  .filters input,
+  .filters select {
+    width: 100%;
+  }
+}

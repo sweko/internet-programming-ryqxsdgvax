@@ -1,0 +1,111 @@
+<div>
+  <h2>Student List</h2>
+  <p>Total Students: {{ totalStudents }}</p>
+
+  <!-- Toggle display format -->
+  <button (click)="toggleDisplayFormat()">
+    Toggle Name Format (Current: {{ displayFormat === 'firstNameLastName' ? 'FirstName LastName' : 'LastName, FirstName' }})
+  </button>
+
+  <!-- Add new student -->
+  <button (click)="addNewStudent()">Add New Student</button>
+
+  <!-- Filters Section -->
+  <div class="filters">
+    <h3>Filters</h3>
+
+    <!-- Filter by Student ID or Name -->
+    <label>
+      Search by ID or Name:
+      <input type="text" [(ngModel)]="filterText" (input)="applyFilters()" placeholder="Search ID or Name" />
+    </label>
+
+    <!-- Filter by Degree -->
+    <label>
+      Degree:
+      <select [(ngModel)]="filterDegree" (change)="applyFilters()">
+        <option value="">All</option>
+        <option *ngFor="let degree of degrees" [value]="degree">{{ degree }}</option>
+      </select>
+    </label>
+
+    <!-- Filter by Year -->
+    <label>
+      Year:
+      <select multiple [(ngModel)]="filterYears" (change)="applyFilters()">
+        <option *ngFor="let year of [1, 2, 3, 4]" [value]="year">{{ year }}</option>
+      </select>
+    </label>
+
+    <!-- Filter by Grade Percentage -->
+    <label>
+      Grade Range (%):
+      <input type="number" [(ngModel)]="filterGradeMin" (input)="applyFilters()" placeholder="Min %" />
+      -
+      <input type="number" [(ngModel)]="filterGradeMax" (input)="applyFilters()" placeholder="Max %" />
+    </label>
+
+    <!-- Filter by Grade Letter -->
+    <label>
+      Grade Letter Range:
+      <select [(ngModel)]="filterLetterMin" (change)="applyFilters()">
+        <option *ngFor="let grade of gradeLetters" [value]="grade">{{ grade }}</option>
+      </select>
+      -
+      <select [(ngModel)]="filterLetterMax" (change)="applyFilters()">
+        <option *ngFor="let grade of gradeLetters" [value]="grade">{{ grade }}</option>
+      </select>
+    </label>
+  </div>
+
+  <!-- Students Table -->
+  <table>
+    <thead>
+      <tr>
+        <th (click)="sortBy('studentId')">Student ID</th>
+        <th (click)="sortBy('name')">Name</th>
+        <th (click)="sortBy('degreeName')">Degree</th>
+        <th (click)="sortBy('year')">Year</th>
+        <th (click)="sortBy('email')">Email</th>
+        <th (click)="sortBy('averageGrade')">Average Grade (%)</th>
+        <th (click)="sortBy('letterGrade')">Letter Grade</th>
+        <th (click)="sortBy('numberOfCourses')">Number of Courses</th>
+        <th (click)="sortBy('numberOfGradedCourses')">Number of Graded Courses</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of displayedStudents">
+        <td>{{ student.studentId }}</td>
+        <td>
+          {{ displayFormat === 'firstNameLastName'
+            ? student.firstName + ' ' + student.lastName
+            : student.lastName + ', ' + student.firstName }}
+        </td>
+        <td>{{ student.degreeName }}</td>
+        <td>{{ student.year }}</td>
+        <td>{{ student.email }}</td>
+        <td>{{ student.averageGrade }}</td>
+        <td>{{ student.letterGrade }}</td>
+        <td>{{ student.numberOfCourses }}</td>
+        <td>{{ student.numberOfGradedCourses }}</td>
+        <td>
+          <button (click)="viewStudent(student.id)">View</button>
+          <button (click)="editStudent(student.id)">Edit</button>
+          <button (click)="deleteStudent(student.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Pagination Controls -->
+  <div>
+    <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }} of {{ getTotalPages() }}</span>
+    <button (click)="changePage(currentPage + 1)" [disabled]="currentPage >= getTotalPages()">Next</button>
+  </div>
+</div>
+
+<ng-template #noData>
+  <p>No students available.</p>
+</ng-template>

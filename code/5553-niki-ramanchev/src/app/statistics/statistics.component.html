@@ -1,0 +1,41 @@
+<div>
+  <h2>Statistics</h2>
+
+  <!-- Total Students -->
+  <p><strong>Total Students:</strong> {{ totalStudents }}</p>
+
+  <!-- Average Grade -->
+  <p><strong>Average Grade Across All Students:</strong> {{ averageGrade }}</p>
+
+  <!-- Students Per Degree -->
+  <h3>Number of Students Per Degree</h3>
+  <ul>
+    <li *ngFor="let degree of getKeys(studentsPerDegree)">
+      {{ degree }}: {{ studentsPerDegree[degree] }}
+    </li>
+  </ul>
+
+  <!-- Students Per Year -->
+  <h3>Number of Students Per Year</h3>
+  <ul>
+    <li *ngFor="let year of getKeys(studentsPerYear)">
+      Year {{ year }}: {{ studentsPerYear[+year] }}
+    </li>
+  </ul>
+
+  <!-- Pass Rate Per Course -->
+  <h3>Pass Rate Per Course</h3>
+  <ul>
+    <li *ngFor="let courseCode of getKeys(passRatePerCourse)">
+      {{ courseCode }}: {{ passRatePerCourse[courseCode] }}%
+    </li>
+  </ul>
+
+  <!-- Grade Distribution -->
+  <h3>Grade Distribution</h3>
+  <ul>
+    <li *ngFor="let grade of getKeys(gradeDistribution)">
+      Grade {{ grade }}: {{ gradeDistribution[grade] }}
+    </li>
+  </ul>
+</div>
