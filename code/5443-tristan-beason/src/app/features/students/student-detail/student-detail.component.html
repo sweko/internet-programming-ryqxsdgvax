@@ -1,0 +1,102 @@
+<div class="student-detail-container">
+  @if (loading) {
+    <div class="loading">Loading...</div>
+  } @else if (error) {
+    <div class="error">{{ error }}</div>
+  } @else if (student) {
+    <div class="header">
+      <h1>Student Details</h1>
+      <div class="actions">
+        <button class="btn-back" (click)="goBack()">Back</button>
+        <button class="btn-edit" [routerLink]="['edit']">Edit</button>
+        <button class="btn-delete" (click)="deleteStudent()">Delete</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- Personal Information -->
+      <section class="info-section">
+        <h2>Personal Information</h2>
+        <div class="info-grid">
+          <div class="info-item">
+            <label>Student ID</label>
+            <span>{{ student.studentId }}</span>
+          </div>
+          <div class="info-item">
+            <label>Full Name</label>
+            <span>{{ student.firstName }} {{ student.lastName }}</span>
+          </div>
+          <div class="info-item">
+            <label>Date of Birth</label>
+            <span>{{ formatDate(student.dateOfBirth) }}</span>
+          </div>
+          <div class="info-item">
+            <label>Email</label>
+            <span>{{ student.email }}</span>
+          </div>
+          <div class="info-item">
+            <label>Degree</label>
+            <span>{{ student.degree }}</span>
+          </div>
+          <div class="info-item">
+            <label>Year of Study</label>
+            <span>{{ student.year }}</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Academic Information -->
+      <section class="info-section">
+        <h2>Academic Information</h2>
+        
+        <div class="academic-summary">
+          <div class="summary-item">
+            <label>Average Grade</label>
+            <span>
+              @if (calculateAverageGrade()) {
+                {{ calculateAverageGrade().toFixed(1) }}%
+                ({{ getLetterGrade(calculateAverageGrade()) }})
+              } @else {
+                N/A
+              }
+            </span>
+          </div>
+          <div class="summary-item">
+            <label>Success Rate</label>
+            <span>{{ calculateSuccessRate() }}%</span>
+          </div>
+        </div>
+
+        <h3>Courses</h3>
+        <table class="course-table">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Name</th>
+              <th>Year</th>
+              <th>Semester</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (course of student.courses; track course.code) {
+              <tr>
+                <td>{{ course.code }}</td>
+                <td>{{ course.code }}</td>
+                <td>{{ course.semester }}</td>
+                <td>
+                  @if (course.grade) {
+                    {{ course.grade.percentage }}%
+                    ({{ course.grade.letter }})
+                  } @else {
+                    Not Graded
+                  }
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </section>
+    </div>
+  }
+</div> 
