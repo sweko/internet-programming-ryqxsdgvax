@@ -45,14 +45,24 @@ import { CommonModule } from '@angular/common'; // Import CommonModule
 
       <button type="submit" [disabled]="studentForm.invalid">Submit</button>
     </form>
+
+    <h2>Assigned Courses</h2>
+    <div *ngFor="let course of assignedCourses">
+      <p>Course Name: {{ course.name }}</p>
+      <p>Semester: {{ course.semester }}</p>
+      <p>Grade: {{ course.grade || 'N/A' }}</p>
+      <hr />
+    </div>
   `,
-  imports: [ReactiveFormsModule] // Add ReactiveFormsModule to imports
+  imports: [ReactiveFormsModule, CommonModule] // Ensure CommonModule is included
 })
 export class StudentEditComponent implements OnInit {
   studentForm!: FormGroup;
   degrees = ['Bachelor', 'Master', 'PhD']; // Example degrees
+  studentId!: string; // Variable to hold the student ID
+  assignedCourses: any[] = []; // Array to hold assigned courses
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private route: ActivatedRoute, private http: HttpClient) {}
 
   ngOnInit() {
     this.studentForm = this.fb.group({
@@ -61,6 +71,16 @@ export class StudentEditComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       degree: ['', Validators.required],
       year: ['', [Validators.required, Validators.min(1), Validators.max(4)]],
+    });
+
+    // Fetch the student ID from the route
+    this.studentId = this.route.snapshot.paramMap.get('id')!;
+    
+    // Call the API to fetch student data
+    this.http.get(`/students/${this.studentId}`).subscribe((data: any) => {
+      // Populate the form with the fetched data
+      this.studentForm.patchValue(data);
+      this.assignedCourses = data.courses || []; // Assuming courses are part of the student data
     });
   }
 
