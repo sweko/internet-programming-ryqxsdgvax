@@ -1,0 +1,26 @@
+/* Basic styling for the student details component */
+h2 {
+  text-align: center;
+}
+
+div {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+p {
+  margin: 5px 0;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}

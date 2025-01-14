@@ -1,0 +1,45 @@
+<div>
+  <h2>Student List</h2>
+  <input type="text" [(ngModel)]="searchQuery" placeholder="Search by ID or Name" />
+  <select [(ngModel)]="selectedDegree">
+    <option value="">All Degrees</option>
+    <!-- Populate with degrees from the service -->
+  </select>
+  <select [(ngModel)]="selectedYear" multiple>
+    <option value="1">Year 1</option>
+    <option value="2">Year 2</option>
+    <option value="3">Year 3</option>
+    <option value="4">Year 4</option>
+  </select>
+  <table>
+    <thead>
+      <tr>
+        <th>Student ID</th>
+        <th>Name</th>
+        <th>Degree</th>
+        <th>Year</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of paginatedStudents">
+        <td>{{ student.studentId }}</td>
+        <td>{{ student.firstName }} {{ student.lastName }}</td>
+        <td>{{ student.degree }}</td>
+        <td>{{ student.year }}</td>
+        <td>{{ student.email }}</td>
+        <td>
+          <button (click)="viewStudent(student.id)">View</button>
+          <button (click)="editStudent(student.id)">Edit</button>
+          <button (click)="deleteStudent(student.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <button (click)="currentPage = currentPage - 1" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }}</span>
+    <button (click)="currentPage = currentPage + 1" [disabled]="currentPage * itemsPerPage >= totalItems">Next</button>
+  </div>
+</div>
