@@ -1,7 +1,8 @@
+import { SemesterType } from "./student.model";
 export interface Course{
     id: number;
     name: string;
     code: string;
-    semester: 'autumn' | 'spring';
+    semester: SemesterType;
     yearOfStudy: number;
 }

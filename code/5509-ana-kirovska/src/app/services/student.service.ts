@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   providedIn: 'root'
 })
 export class StudentService {
-  private apiUrl='https://localhost:3000/students'
+  private apiUrl='http://localhost:3000/students'
 
   constructor(private http:HttpClient) { }
 
@@ -16,7 +16,7 @@ export class StudentService {
     return this.http.post<Student>(this.apiUrl,studentRequest);
   }
 
-  fetchStudents():Observable<Student[]>{
+  fetchStudents(){
     return this.http.get<Student[]>(this.apiUrl);
   }
 

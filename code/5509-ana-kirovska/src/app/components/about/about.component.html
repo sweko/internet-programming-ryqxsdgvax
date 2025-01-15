@@ -1,4 +1,27 @@
-<h1>About</h1>
-<h3>Name: </h3>
-<h3>ID :</h3>
-<h3>Current Year:</h3>
+<div class="flex justify-center p-6">
+    <mat-card class="w-full max-w-4xl shadow-lg rounded-lg">
+      <mat-card-header class="bg-blue-600 text-white rounded-t-lg p-4">
+        <h1 class="text-2xl font-bold text-center">About the Student</h1>
+      </mat-card-header>
+  
+      <mat-card-content class="p-6">
+        <div class="space-y-4">
+          <p><strong>Name:</strong> {{ student.name }}</p>
+          <p><strong>Student ID:</strong> {{ student.studentId }}</p>
+          <p><strong>Current Year:</strong> {{ student.currentYear }}</p>
+          <p><strong>GitHub Repository:</strong>
+            <a [href]="student.githubRepo" target="_blank" class="text-blue-500 hover:underline">
+              View Project
+            </a>
+          </p>
+        </div>
+      </mat-card-content>
+  
+      <mat-card-actions class="bg-gray-100 p-4 rounded-b-lg">
+        <button mat-raised-button color="primary" [routerLink]="['/students']" class="ml-auto">
+          Back to Student Listing
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  

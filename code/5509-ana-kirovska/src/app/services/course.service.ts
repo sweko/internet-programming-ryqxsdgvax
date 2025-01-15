@@ -1,16 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Degree } from '../models/degree.model';
+import { Course } from '../models/course.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DegreeService {
-  private apiUrl='http://localhost:3000/degrees'
+export class CourseService {
+  private apiUrl='http://localhost:3000/courses'
 
   constructor(private http:HttpClient) { }
 
   fetchDegrees(){
-    return this.http.get<Degree[]>(this.apiUrl);
+    return this.http.get<Course[]>(this.apiUrl);
   }
 }
