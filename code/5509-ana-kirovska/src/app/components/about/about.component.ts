@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
 })
 export class AboutComponent {
   student = {
-    name: 'Ann kirovska',
+    name: 'Ana kirovska',
     studentId: '5509',
     currentYear: new Date().getFullYear(),
     githubRepo: 'https://github.com/ann/repository-name'
