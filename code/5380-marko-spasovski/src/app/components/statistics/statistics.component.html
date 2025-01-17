@@ -1,0 +1,27 @@
+<h2>Statistics</h2>
+
+<div>
+  <h3>Total number of students: {{ totalStudents }}</h3>
+  <h3>Average grade across all students: {{ averageGrade | number:'1.2-2' }}</h3>
+
+  <h3>Number of students per degree:</h3>
+  <ul>
+    <li *ngFor="let degree of studentsPerDegree | keyvalue">
+      {{ degree.key }}: {{ degree.value }}
+    </li>
+  </ul>
+
+  <h3>Number of students per year:</h3>
+  <ul>
+    <li *ngFor="let year of studentsPerYear | keyvalue">
+      Year {{ year.key }}: {{ year.value }}
+    </li>
+  </ul>
+
+  <h3>Pass rate per course:</h3>
+  <ul>
+    <li *ngFor="let course of passRatePerCourse | keyvalue">
+      {{ course.key }}: {{ course.value | number:'1.2-2' }}%
+    </li>
+  </ul>
+</div>

@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { delay, Observable, Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterModule],
+  imports: [RouterOutlet, RouterModule, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -26,8 +26,11 @@ export class AppComponent implements OnInit {
 
   private dataTest: Observable<any>;
 
+  public myName = "Marko Spasovski";
+  public myId = 5380;
+
   // Should this http be here or in a separate file?
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient, ) { 
     this.dataTest = this.http.get('http://localhost:3000', {responseType: "text"}).pipe(delay(1000), takeUntilDestroyed());
   }
 
