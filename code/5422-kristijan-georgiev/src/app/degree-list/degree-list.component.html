@@ -1,0 +1,31 @@
+<br>
+<div>
+    <div class="filter-container">
+        <label for="percentageFilter">Percentage:</label>
+        <input [(ngModel)]="percentagefilter" (input)='applyFilters()' name="percentageFilter" class="input-field"/>
+    </div>
+    <button style="background-color: rgb(0, 192, 250); color: white;"><a routerLink="/degree-add" class="add-degree">Add New Degree</a></button>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th (click)="sortByID()">ID</th>
+                <th (click)="sortByPercentage()">Percentage</th>
+                <th>Letter</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let degree of degrees">
+                <td>{{ degree.id }}</td>
+                <td>{{ degree.percentage }}</td>
+                <td>{{ degree.letter }}</td>
+                <td>
+                    <button style="background-color: blue; color: white;" (click)="viewGradeDetails(degree)">View</button>
+                    <button style="background-color: rgb(21, 177, 15); color: white;" (click)="editGrade(degree)">Edit</button>
+                    <button style="background-color: red; color: white;" (click)="deleteGrade(degree)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

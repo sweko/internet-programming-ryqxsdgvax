@@ -1,0 +1,12 @@
+<div *ngIf="course">
+    <h2 style="color: rgb(0, 0, 0);">Course Details</h2>
+    <p style="color: rgb(0, 0, 0);"><strong>ID:</strong> {{ course.id }}</p>
+    <p style="color: rgb(0, 0, 0);"><strong>Name:</strong> {{ course.name }}</p>
+    <p style="color: rgb(0, 0, 0);"><strong>Code:</strong> {{ course.code }}</p>
+    <p style="color: rgb(0, 0, 0);"><strong>Semester:</strong> {{ course.semester}}</p>
+    <p style="color: rgb(0, 0, 0);"><strong>YearOfStudy:</strong> {{ course.yearofStudy }}</p>
+    <div style="margin-top: 10px;">
+        <button style="background-color: firebrick; color: white;" type="button" class="back-button" (click)="goToCourseList()">Back</button>
+      </div>
+  </div>
+  

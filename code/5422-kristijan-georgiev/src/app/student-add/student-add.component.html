@@ -1,0 +1,35 @@
+<div>
+    <h2>Add New Student</h2>
+    <form (submit)="addStudent()">
+        <!-- Movie Title -->
+        <label for="firstname">FirstName:</label>
+        <input [(ngModel)]="newStudent.firstName" name="firstName" required />
+
+        <label for="lastname">LastName:</label>
+        <input [(ngModel)]="newStudent.lastName" name="lastName" required />
+
+        <label for="studentId">StudentId:</label>
+        <input [(ngModel)]="newStudent.studentId" name="studentId" />
+
+        <!-- Movie Year -->
+        <label for="dateofBirth">DateOfBirth:</label>
+        <input [(ngModel)]="newStudent.dateOfBirth" name="dateOfBirth" type="date" required />
+
+        <!-- Director -->
+        <label for="email">Email:</label>
+        <input [(ngModel)]="newStudent.email" name="email" required />
+
+        <label for="degree">Degree:</label>
+        <input [(ngModel)]="newStudent.degree" name="degree" required />
+
+        <!-- Plot -->
+        <label for="year">Year:</label>
+        <input [(ngModel)]="newStudent.year" name="year" type="number" required />
+
+        <hr>
+        <div style="margin-top: 10px;">
+            <button type="submit">Save Student</button>
+            <button type="button" class="back-button" (click)="goToStudentList()">Back</button>
+          </div>
+    </form>
+</div>

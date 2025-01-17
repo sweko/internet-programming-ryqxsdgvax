@@ -1,0 +1,18 @@
+<div *ngIf="course">
+    <h2>Edit Course</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input [(ngModel)]="course.name" name="name" />
+
+        <label for="code">Code:</label>
+        <input [(ngModel)]="course.code" name="code" type="number" />
+
+        <label for="semestar">Semestar:</label>
+        <input [(ngModel)]="course.semester" name="semestar" />
+
+        <label for="yearofstudy">YearOfStudy:</label>
+        <input [(ngModel)]="course.yearofStudy" name="yearofStudy" type="number" />
+
+        <button style="background-color: rgb(23, 124, 218); color: white;" (click)="saveChanges()">Save Changes</button>
+    </form>
+</div>
