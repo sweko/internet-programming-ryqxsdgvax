@@ -1,0 +1,35 @@
+<div>
+    <h2>Student List</h2>
+    <p>Total Students: {{ totalStudents }}</p>
+  
+    <table class="table" *ngIf="students.length > 0">
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>Degree</th>
+          <th>Year</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students">
+          <td>{{ student.studentId }}</td>
+          <td>{{ student.firstName }} {{ student.lastName }}</td>
+          <td>{{ student.degree }}</td>
+          <td>{{ student.year }}</td>
+          <td>{{ student.email }}</td>
+          <td>
+            <button [routerLink]="'/students/' + student.id + '/edit'" class="btn btn-warning">Edit</button>
+            <button (click)="deleteStudent(student.id)" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <p *ngIf="students.length === 0">No students found. Click the button below to add new students.</p>
+  
+    <button routerLink="/students/create" class="btn btn-primary">Add New Student</button>
+  </div>
+  
