@@ -1,0 +1,10 @@
+<div>
+    <h1>Student List</h1>
+    <button routerLink="/students/create" class="add-button">Add New Student</button>
+    <ul>
+      <li *CommonModule="let student of students">
+        {{ student.firstName }} {{ student.lastName }} (ID: {{ student.studentId }})
+      </li>
+    </ul>
+  </div>
+  
