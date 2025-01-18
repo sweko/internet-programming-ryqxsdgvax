@@ -1,0 +1,31 @@
+.about-page {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--background-light);
+  border: 1px solid var(--primary-light);
+  border-radius: var(--border-radius);
+}
+
+.about-page h1 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.about-page p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
+
+.about-page a {
+  color: var(--primary-dark);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+.about-page a:hover {
+  color: var(--primary);
+}

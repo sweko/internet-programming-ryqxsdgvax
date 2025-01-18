@@ -1,0 +1,56 @@
+.degree-list {
+  padding: 2rem;
+}
+
+.filters {
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.filters label {
+  display: flex;
+  flex-direction: column;
+}
+
+.filters select {
+  padding: 0.5rem;
+  border: 1px solid var(--primary-light);
+  border-radius: var(--border-radius);
+}
+
+.filters button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: var(--light);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background-color: var(--primary-light);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+table th,
+table td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid var(--primary-light);
+}
+
+table th {
+  background-color: var(--primary);
+  color: var(--light);
+  cursor: pointer;
+}
+
+table th:hover {
+  background-color: var(--primary-light);
+}

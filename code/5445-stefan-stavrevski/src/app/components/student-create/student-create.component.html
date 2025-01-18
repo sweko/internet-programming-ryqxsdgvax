@@ -1,0 +1,113 @@
+<div class="student-create">
+  <h1>Create Student</h1>
+
+  <form [formGroup]="studentForm" (ngSubmit)="saveStudent()">
+    <!-- Personal Information -->
+    <section class="personal-info">
+      <h2>Personal Information</h2>
+
+      <label>
+        First Name:
+        <input formControlName="firstName" type="text" />
+        <div
+          *ngIf="
+            studentForm.get('firstName')?.touched &&
+            studentForm.get('firstName')?.invalid
+          "
+        >
+          <small>First Name is required.</small>
+        </div>
+      </label>
+
+      <label>
+        Last Name:
+        <input formControlName="lastName" type="text" />
+        <div
+          *ngIf="
+            studentForm.get('lastName')?.touched &&
+            studentForm.get('lastName')?.invalid
+          "
+        >
+          <small>Last Name is required.</small>
+        </div>
+      </label>
+
+      <label>
+        Student ID:
+        <input formControlName="studentId" type="text" />
+        <div
+          *ngIf="
+            studentForm.get('studentId')?.touched &&
+            studentForm.get('studentId')?.invalid
+          "
+        >
+          <small>Student ID is required.</small>
+        </div>
+      </label>
+
+      <label>
+        Date of Birth:
+        <input formControlName="dateOfBirth" type="date" />
+        <div
+          *ngIf="
+            studentForm.get('dateOfBirth')?.touched &&
+            studentForm.get('dateOfBirth')?.invalid
+          "
+        >
+          <small>Date of Birth is required.</small>
+        </div>
+      </label>
+
+      <label>
+        Email:
+        <input formControlName="email" type="email" />
+        <div
+          *ngIf="
+            studentForm.get('email')?.touched &&
+            studentForm.get('email')?.invalid
+          "
+        >
+          <small>Enter a valid email address.</small>
+        </div>
+      </label>
+
+      <label>
+        Degree:
+        <select formControlName="degree">
+          <option value="">Select Degree</option>
+          <option *ngFor="let degree of degrees" [value]="degree.name">
+            {{ degree.name }}
+          </option>
+        </select>
+        <div
+          *ngIf="
+            studentForm.get('degree')?.touched &&
+            studentForm.get('degree')?.invalid
+          "
+        >
+          <small>Degree is required.</small>
+        </div>
+      </label>
+
+      <label>
+        Year:
+        <input formControlName="year" type="number" min="1" max="4" />
+        <div
+          *ngIf="
+            studentForm.get('year')?.touched && studentForm.get('year')?.invalid
+          "
+        >
+          <small>Enter a valid year (1-4).</small>
+        </div>
+      </label>
+    </section>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button type="submit" [disabled]="studentForm.invalid">Save</button>
+      <button type="button" (click)="router.navigate(['/students'])">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

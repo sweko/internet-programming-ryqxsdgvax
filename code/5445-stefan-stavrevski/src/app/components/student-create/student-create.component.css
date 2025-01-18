@@ -1,0 +1,55 @@
+.student-create {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.student-create h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.student-create form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.student-create label {
+  display: flex;
+  flex-direction: column;
+}
+
+.student-create input,
+.student-create select {
+  padding: 0.5rem;
+  border: 1px solid var(--primary-light);
+  border-radius: var(--border-radius);
+}
+
+.student-create small {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.student-create .actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.student-create button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: var(--light);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.student-create button:hover {
+  background-color: var(--primary-light);
+}
