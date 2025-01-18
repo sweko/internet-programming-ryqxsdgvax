@@ -1,0 +1,93 @@
+<div class="statistics-container">
+  @if (loading) {
+    <div class="loading">Loading...</div>
+  } @else if (error) {
+    <div class="error">{{ error }}</div>
+  } @else {
+    <h1>Statistics</h1>
+
+    <!-- Overall Statistics -->
+    <section class="stats-section">
+      <h2>Overall Statistics</h2>
+      <div class="overall-stats">
+        <div class="stat-card">
+          <div class="stat-value">{{ totalStudents }}</div>
+          <div class="stat-label">Total Students</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">
+            @if (overallAverageGrade) {
+              {{ overallAverageGrade.toFixed(1) }}%
+              ({{ getLetterGrade(overallAverageGrade) }})
+            } @else {
+              N/A
+            }
+          </div>
+          <div class="stat-label">Average Grade</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Degree Statistics -->
+    <section class="stats-section">
+      <h2>Statistics by Degree</h2>
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Degree</th>
+            <th>Students</th>
+            <th>Average Grade</th>
+            <th>Pass Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (stat of degreeStats; track stat.code) {
+            <tr>
+              <td>{{ stat.code }}</td>
+              <td>{{ stat.studentCount }}</td>
+              <td>
+                @if (stat.averageGrade) {
+                  {{ stat.averageGrade.toFixed(1) }}%
+                  ({{ getLetterGrade(stat.averageGrade) }})
+                } @else {
+                  N/A
+                }
+              </td>
+              <td>{{ stat.passRate.toFixed(1) }}%</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Year Statistics -->
+    <section class="stats-section">
+      <h2>Statistics by Year</h2>
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Students</th>
+            <th>Average Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (stat of yearStats; track stat.year) {
+            <tr>
+              <td>Year {{ stat.year }}</td>
+              <td>{{ stat.studentCount }}</td>
+              <td>
+                @if (stat.averageGrade) {
+                  {{ stat.averageGrade.toFixed(1) }}%
+                  ({{ getLetterGrade(stat.averageGrade) }})
+                } @else {
+                  N/A
+                }
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </section>
+  }
+</div> 

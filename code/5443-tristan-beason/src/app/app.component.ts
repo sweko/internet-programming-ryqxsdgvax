@@ -1,49 +1,30 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { RouterModule, RouterOutlet } from '@angular/router';
-import { delay, Observable, Subject, takeUntil } from 'rxjs';
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
+  template: `
+    <app-header></app-header>
+    <main class="main-content">
+      <router-outlet></router-outlet>
+    </main>
+    <app-footer></app-footer>
+  `,
+  styles: [`
+    :host {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: var(--spacing-lg) 0;
+    }
+  `]
 })
-export class AppComponent implements OnInit {
-  // This file should be refactored, feel free to move the code around, create new files, or delete it altogether.
-  currentYear: number = 0;
-
-  welcomeMessage = 'Welcome to the Student Management System!';
-  statusMessage = 'Checking data connection...';
-
-  routes = [
-    { linkName: 'Students' , url: '/students' },
-    { linkName: 'Degrees', url: '/degrees' },
-    { linkName: 'Courses', url: '/courses' },
-    { linkName: 'Statistics', url: '/statistics' }
-  ];
-
-  private dataTest: Observable<any>;
-
-  // Should this http be here or in a separate file?
-  constructor(private http: HttpClient) { 
-    this.dataTest = this.http.get('http://localhost:3000', {responseType: "text"}).pipe(delay(1000), takeUntilDestroyed());
-  }
-
-
-  ngOnInit() {
-    this.currentYear = new Date().getFullYear();
-
-    this.dataTest.subscribe({
-      next: _ => {
-        this.statusMessage = 'Data connection is working!';
-      },
-      error: (error) => {
-        this.statusMessage = `Data connection failed (see console for details)! ${error.message}`;
-        console.error(error);
-      }
-    });
-  }
-
-}
+export class AppComponent {}

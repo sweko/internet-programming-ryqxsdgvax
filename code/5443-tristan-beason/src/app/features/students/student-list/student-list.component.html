@@ -1,0 +1,144 @@
+<div class="student-list-container">
+  <ng-container *ngIf="loading$ | async; else content">
+    <div class="loading-overlay">
+      <div class="spinner"></div>
+      <p>Loading students...</p>
+    </div>
+  </ng-container>
+
+  <ng-template #content>
+    <ng-container *ngIf="error$ | async as error">
+      <div class="error-message">
+        {{ error }}
+        <button (click)="retry()">Retry</button>
+      </div>
+    </ng-container>
+
+    <div class="header">
+      <h1>Students</h1>
+      <button class="btn-primary" routerLink="create">
+        Add New Student
+      </button>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <div class="search-box">
+        <input 
+          type="text" 
+          [(ngModel)]="searchTerm"
+          (ngModelChange)="applyFilters()"
+          placeholder="Search by name or ID..."
+        >
+      </div>
+
+      <div class="filter-group">
+        <select 
+          [(ngModel)]="selectedDegree"
+          (ngModelChange)="applyFilters()"
+        >
+          <option value="">All Degrees</option>
+          @for (degree of degrees; track degree) {
+            <option [value]="degree">{{ degree }}</option>
+          }
+        </select>
+
+        <div class="year-filters">
+          @for (year of [1,2,3,4]; track year) {
+            <label>
+              <input 
+                type="checkbox"
+                [checked]="selectedYears.includes(year)"
+                (change)="onYearChange(year)"
+              >
+              Year {{ year }}
+            </label>
+          }
+        </div>
+      </div>
+
+      <div class="name-format">
+        <label>
+          <input 
+            type="radio" 
+            [(ngModel)]="nameFormat" 
+            value="firstLast"
+            (ngModelChange)="applyFilters()"
+          > First Last
+        </label>
+        <label>
+          <input 
+            type="radio" 
+            [(ngModel)]="nameFormat" 
+            value="lastFirst"
+            (ngModelChange)="applyFilters()"
+          > Last, First
+        </label>
+      </div>
+    </div>
+
+    <!-- Student Table -->
+    <table class="student-table">
+      <thead>
+        <tr>
+          <th (click)="onSort('studentId')">Student ID</th>
+          <th (click)="onSort('lastName')">Name</th>
+          <th (click)="onSort('degree')">Degree</th>
+          <th (click)="onSort('year')">Year</th>
+          <th (click)="onSort('email')">Email</th>
+          <th (click)="onSort('averageGrade')">Average Grade</th>
+          <th>Letter Grade</th>
+          <th>Courses</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (student of paginatedStudents; track student.id) {
+          <tr>
+            <td>{{ student.studentId }}</td>
+            <td>{{ formatName(student) }}</td>
+            <td>{{ student.degree }}</td>
+            <td>{{ student.year }}</td>
+            <td>{{ student.email }}</td>
+            <td>
+              @if (calculateAverageGrade(student)) {
+                {{ calculateAverageGrade(student).toFixed(2) }}%
+              } @else {
+                N/A
+              }
+            </td>
+            <td>
+              @if (calculateAverageGrade(student)) {
+                {{ getLetterGrade(calculateAverageGrade(student)) }}
+              } @else {
+                N/A
+              }
+            </td>
+            <td>
+              {{ student.courses.length }}
+              ({{ getGradedCoursesCount(student) }} graded)
+            </td>
+            <td class="actions">
+              <button class="btn-view" [routerLink]="[student.id]">View</button>
+              <button class="btn-edit" [routerLink]="[student.id, 'edit']">Edit</button>
+              <button class="btn-delete" (click)="deleteStudent(student)">Delete</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <button 
+        [disabled]="currentPage === 1"
+        (click)="onPageChange(-1)"
+      >Previous</button>
+      <span>Page {{ currentPage }} of {{ totalPages }}</span>
+      <button 
+        [disabled]="currentPage === totalPages"
+        (click)="onPageChange(1)"
+      >Next</button>
+    </div>
+  </ng-template>
+</div> 
