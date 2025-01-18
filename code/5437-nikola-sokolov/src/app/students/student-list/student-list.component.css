@@ -1,0 +1,67 @@
+/* Container for the student list */
+.student-list {
+  margin: 20px auto;
+  max-width: 1000px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling */
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.student-table th, .student-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.student-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.student-table td button {
+  padding: 8px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.student-table td button:hover {
+  background-color: #45a049;
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Add new student button styling */
+.add-student-btn {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.add-student-btn button {
+  padding: 10px 20px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-student-btn button:hover {
+  background-color: #007B9E;
+}
