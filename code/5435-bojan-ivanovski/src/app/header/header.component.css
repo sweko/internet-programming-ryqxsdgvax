@@ -1,0 +1,35 @@
+.navbar {
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .nav-link {
+    color: #fff !important;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #17a2b8 !important;
+  }
+  
+  .nav-link.active {
+    color: #17a2b8 !important;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 991px) {
+    .navbar-nav {
+      padding: 1rem 0;
+    }
+    
+    .nav-link {
+      padding: 0.5rem 0;
+    }
+  }

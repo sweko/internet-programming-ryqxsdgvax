@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Students List</h2>
+        <button class="btn btn-primary" (click)="addStudent()">
+          <i class="fas fa-plus"></i> Add Student
+        </button>
+      </div>
+
+    <div class="filters-section mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="input-group">
+          <input 
+            type="text" 
+            class="form-control" 
+            placeholder="Search by ID or Name"
+            [(ngModel)]="searchText"
+            (input)="applyFiltersAndSort()">
+        </div>
+        <button class="btn btn-outline-secondary" (click)="resetFilters()">
+          Reset Filters
+        </button>
+      </div>
+  
+      <div class="d-flex gap-3">
+        <select 
+          class="form-select" 
+          [(ngModel)]="selectedDegree"
+          (change)="applyFiltersAndSort()">
+          <option value="">All Degrees</option>
+          <option *ngFor="let degree of degrees" [value]="degree.code">
+            {{degree.name}}
+          </option>
+        </select>
+        
+        <select 
+          class="form-select" 
+          multiple 
+          [(ngModel)]="selectedYears"
+          (change)="applyFiltersAndSort()">
+          <option *ngFor="let year of [1,2,3,4]" [value]="year">Year {{year}}</option>
+        </select>
+      </div>
+    </div>
+  
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead class="table-light">
+          <tr>
+            <th (click)="sortData('studentId')">Student ID</th>
+            <th (click)="sortData('name')">Name</th>
+            <th (click)="sortData('degree')">Degree</th>
+            <th (click)="sortData('year')">Year</th>
+            <th (click)="sortData('email')">Email</th>
+            <th (click)="sortData('averageGrade')">Average Grade</th>
+            <th (click)="sortData('courses')">Courses</th>
+            <th (click)="sortData('numberOfGrades')">Grades</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of getPaginatedStudents()">
+            <td>{{student.studentId}}</td>
+            <td>{{formatName(student)}}</td>
+            <td>{{getDegreeName(student.degree)}}</td>
+            <td>{{student.year}}</td>
+            <td>{{student.email}}</td>
+            <td>{{calculateAverageGrade(student)}}</td>
+            <td>{{student.courses.length}}</td>
+            <td>{{getNumberOfGrades(student)}}</td>
+            <td>
+              <div class="btn-group">
+                <button class="btn btn-primary btn-sm" (click)="viewStudent(student.id)">View</button>
+                <button class="btn btn-secondary btn-sm" (click)="editStudent(student.id)">Edit</button>
+                <button class="btn btn-danger btn-sm" (click)="deleteStudent(student.id)">Delete</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <mat-paginator
+      [length]="totalStudents"
+      [pageSize]="pageSize"
+      [pageIndex]="currentPage"
+      (page)="onPageChange($event)">
+    </mat-paginator>
+  </div>
