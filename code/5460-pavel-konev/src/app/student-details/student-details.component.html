@@ -1,0 +1,23 @@
+<div class="details-container">
+  <h2>Student Details</h2>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  <div *ngIf="student">
+    <p><strong>Student ID:</strong> {{ student.studentId }}</p>
+    <p><strong>Name:</strong> {{ student.firstName }} {{ student.lastName }}</p>
+    <p><strong>Date of Birth:</strong> {{ student.dateOfBirth }}</p>
+    <p><strong>Email:</strong> {{ student.email }}</p>
+    <p><strong>Degree:</strong> {{ student.degree }}</p>
+    <p><strong>Year of Study:</strong> {{ student.year }}</p>
+    <h3>Courses</h3>
+    <ul class="course-list">
+      <li *ngFor="let course of student.courses">
+        <strong>Course Code:</strong> {{ course.code }} - 
+        <strong>Semester:</strong> {{ course.semester }} - 
+        <strong>Grade:</strong> {{ course.grade ? course.grade.percentage + '%' : 'Not Graded' }}
+      </li>
+    </ul>
+    <button routerLink="/students/{{ student.id }}/edit">Edit</button>
+    <button (click)="deleteStudent(student.id)">Delete</button>
+    <button routerLink="/students">Back to List</button>
+  </div>
+</div>

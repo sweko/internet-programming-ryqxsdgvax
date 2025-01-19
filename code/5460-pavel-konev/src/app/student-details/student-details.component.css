@@ -1,0 +1,14 @@
+/* Styles for the Student Details component */
+.details-container {
+  margin: 20px;
+}
+
+.details-header {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.course-list {
+  list-style-type: none;
+  padding: 0;
+}
