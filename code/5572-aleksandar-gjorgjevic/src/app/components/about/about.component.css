@@ -1,0 +1,21 @@
+.about {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.about h1 {
+    margin-bottom: 20px;
+}
+
+.about p {
+    margin: 10px 0;
+}
+
+.about a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.about a:hover {
+    text-decoration: underline;
+}
