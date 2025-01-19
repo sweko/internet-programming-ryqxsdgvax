@@ -11,7 +11,7 @@ import { delay, Observable, Subject, takeUntil } from 'rxjs';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  // This file should be refactored, feel free to move the code around, create new files, or delete it altogether.
+  
   currentYear: number = 0;
 
   welcomeMessage = 'Welcome to the Student Management System!';
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
 
   private dataTest: Observable<any>;
 
-  // Should this http be here or in a separate file?
+ 
   constructor(private http: HttpClient) { 
     this.dataTest = this.http.get('http://localhost:3000', {responseType: "text"}).pipe(delay(1000), takeUntilDestroyed());
   }
