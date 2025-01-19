@@ -1,0 +1,23 @@
+ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+}
+
+li {
+  padding: 8px; /* Padding for list items */
+  border: 1px solid #ccc; /* Border for list items */
+  margin-bottom: 5px; /* Space between list items */
+}
+
+button {
+  margin-left: 10px; /* Space between text and button */
+  padding: 5px 10px; /* Padding for buttons */
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}

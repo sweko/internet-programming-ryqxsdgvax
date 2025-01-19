@@ -1,0 +1,12 @@
+<div>
+  <h2>Student List</h2>
+  <button (click)="navigateToCreate()">Add Student</button>
+  <button (click)="fetchStudents()">Refresh Student List</button>
+  <ul>
+    <li *ngFor="let student of students">
+      {{ student.firstName }} {{ student.lastName }}
+      <button (click)="navigateToEdit(student.id)">Edit</button>
+      <button (click)="deleteStudent(student.id)">Delete</button>
+    </li>
+  </ul>
+</div>
