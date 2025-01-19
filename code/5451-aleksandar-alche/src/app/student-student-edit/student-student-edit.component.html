@@ -1,0 +1,22 @@
+<div>
+    <h1>Edit Student</h1>
+    <form (ngSubmit)="onSubmit()">
+      <label>First Name:</label>
+      <input [(ngModel)]="student.firstName" name="firstName" required>
+  
+      <label>Last Name:</label>
+      <input [(ngModel)]="student.lastName" name="lastName" required>
+  
+      <label>Email:</label>
+      <input [(ngModel)]="student.email" name="email" type="email" required>
+  
+      <label>Degree:</label>
+      <input [(ngModel)]="student.degree" name="degree" required>
+  
+      <label>Year:</label>
+      <input [(ngModel)]="student.year" name="year" type="number" min="1" max="4" required>
+  
+      <button type="submit">Save</button>
+      <button type="button" (click)="onCancel()">Cancel</button>
+    </form>
+  </div>
