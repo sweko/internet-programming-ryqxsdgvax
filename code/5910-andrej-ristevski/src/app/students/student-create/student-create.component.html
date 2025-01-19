@@ -1,0 +1,51 @@
+<div class="container mt-4">
+    <h2>Create New Student</h2>
+    <form [formGroup]="studentForm" (ngSubmit)="createStudent()">
+        <div class="mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input id="firstName" class="form-control" formControlName="firstName" [class.is-invalid]="studentForm.get('firstName')?.invalid && studentForm.get('firstName')?.touched" />
+            <div *ngIf="studentForm.get('firstName')?.invalid && studentForm.get('firstName')?.touched" class="text-danger">
+                First Name is required.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input id="lastName" class="form-control" formControlName="lastName" [class.is-invalid]="studentForm.get('lastName')?.invalid && studentForm.get('lastName')?.touched" />
+            <div *ngIf="studentForm.get('lastName')?.invalid && studentForm.get('lastName')?.touched" class="text-danger">
+                Last Name is required.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="studentId" class="form-label">Student ID</label>
+            <input id="studentId" class="form-control" formControlName="studentId" [class.is-invalid]="studentForm.get('studentId')?.invalid && studentForm.get('studentId')?.touched" />
+            <div *ngIf="studentForm.get('studentId')?.invalid && studentForm.get('studentId')?.touched" class="text-danger">
+                Student ID must be in the format YYYY-NNNN.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="dateOfBirth" class="form-label">Date of Birth</label>
+            <input id="dateOfBirth" type="date" class="form-control" formControlName="dateOfBirth" />
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" type="email" class="form-control" formControlName="email" />
+        </div>
+
+        <div class="mb-3">
+            <label for="degree" class="form-label">Degree</label>
+            <input id="degree" class="form-control" formControlName="degree" />
+        </div>
+
+        <div class="mb-3">
+            <label for="year" class="form-label">Year</label>
+            <input id="year" type="number" class="form-control" formControlName="year" />
+        </div>
+
+        <button class="btn btn-primary" type="submit" [disabled]="studentForm.invalid">Create Student</button>
+        <a [routerLink]="['/students']" class="btn btn-secondary ms-2">Cancel</a>
+    </form>
+</div>
