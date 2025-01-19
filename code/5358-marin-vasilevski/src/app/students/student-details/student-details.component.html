@@ -1,0 +1,15 @@
+<div *CommonModule="student">
+    <h1>Student Details</h1>
+    <p><strong>Name:</strong> {{ student.firstName }} {{ student.lastName }}</p>
+    <p><strong>ID:</strong> {{ student.studentId }}</p>
+    <p><strong>Email:</strong> {{ student.email }}</p>
+    <p><strong>Date of Birth:</strong> {{ student.dateOfBirth }}</p>
+    <p><strong>Degree:</strong> {{ student.degree }}</p>
+    <button (click)="goBack()">Back to List</button>
+    <button (click)="editStudent()">Edit Student</button>
+  </div>
+  
+  <div *CommonModule="!student">
+    <p>Loading student details...</p>
+  </div>
+  

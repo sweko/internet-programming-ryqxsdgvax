@@ -1,0 +1,14 @@
+<div class="student-details">
+  <h2>Student Details</h2>
+
+  <p><strong>First Name:</strong> {{ student.firstName }}</p>
+  <p><strong>Last Name:</strong> {{ student.lastName }}</p>
+  <p><strong>Student ID:</strong> {{ student.studentId }}</p>
+  <p><strong>Email:</strong> {{ student.email }}</p>
+  <p><strong>Year:</strong> {{ student.year }}</p>
+
+  <div class="actions">
+    <button (click)="deleteStudent()">Delete Student</button>
+    <button [routerLink]="['/students']">Back to List</button>
+  </div>
+</div>

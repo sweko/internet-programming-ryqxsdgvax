@@ -1,0 +1,23 @@
+<div>
+  <h2>Student Statistics</h2>
+  
+  <div>
+    <h3>Distribution of Students by Degree</h3>
+    <canvas baseChart
+            [datasets]="[{ data: pieChartData, label: 'Degrees' }]"
+            [labels]="pieChartLabels"
+            [options]="pieChartOptions"
+            chartType="pie">
+    </canvas>
+  </div>
+
+  <div>
+    <h3>Distribution of Students by Year</h3>
+    <canvas baseChart
+            [datasets]="[{ data: barChartData, label: 'Years' }]"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            chartType="bar">
+    </canvas>
+  </div>
+</div>

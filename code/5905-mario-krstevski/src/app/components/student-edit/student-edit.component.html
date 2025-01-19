@@ -1,0 +1,16 @@
+<div class="student-edit">
+    <h2>Edit Student</h2>
+    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="firstName">First Name:</label>
+        <input id="firstName" formControlName="firstName" required>
+      </div>
+      <div>
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" formControlName="lastName" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" required>
+      </div>
+      <div>

@@ -1,0 +1,8 @@
+<div>
+    <h1>Courses List</h1>
+    <ul>
+      <li *ngFor="let course of courses">
+        {{ course.name }} ({{ course.code }}) - Year {{ course.yearOfStudy }} ({{ course.semester }})
+      </li>
+    </ul>
+  </div>

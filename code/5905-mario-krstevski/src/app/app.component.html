@@ -1,35 +1,20 @@
-<!-- The navigation should be moved to a header component -->
-<nav class="navbar">
-  <div class="container navbar-container">
-    <a routerLink="/" class="navbar-brand">
-      <h1>University Management</h1>
-    </a>
-    <ul class="navbar-nav">
-      @for (route of routes; track $index) {
-        <li class="nav-item">
-          <a  [routerLink]="route.url" routerLinkActive="active" class="nav-link">{{route.linkName}}</a>
-        </li>
-      }
-    </ul>
-  </div>
-</nav>
+<div class="app-container">
+  <header>
+    <h1>Welcome to the Student Management System</h1>
+    <p>Manage student records, courses, and degrees efficiently.</p>
+  </header>
 
-<!-- Main Content -->
-<main class="main-content">
-  <div class="container">
-    <h3>{{ welcomeMessage }}</h3>
-    <p>{{ statusMessage}}</p>
-    <router-outlet></router-outlet>
-  </div>
-</main>
-
-<!-- This should be moved to a footer component -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <p>&copy; {{currentYear}} University Management System</p>
-      <p>Student: <span>Your Name</span> | ID: <span>12345</span></p>
-      <a routerLink="/about" class="footer-link">About</a>
+  <main>
+    <h2>Features</h2>
+    <div class="button-container">
+      <button (click)="viewStudents()" class="action-button">View Student Lists</button>
+      <button (click)="addStudent()" class="action-button">Add New Student</button>
+      <button (click)="editStudent()" class="action-button">Edit Existing Student</button>
+      <button (click)="manageCourses()" class="action-button">Manage Courses</button>
+      <button (click)="viewStatistics()" class="action-button">View Statistics</button>
     </div>
-  </div>
-</footer>
+
+    <h2>Getting Started</h2>
+    <p>Select an option from the buttons above to navigate to the desired section.</p>
+  </main>
+</div>

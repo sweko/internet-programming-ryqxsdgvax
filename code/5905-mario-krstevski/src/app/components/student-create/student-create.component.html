@@ -1,0 +1,27 @@
+<div class="student-create">
+    <h2>Create New Student</h2>
+    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="firstName">First Name:</label>
+        <input id="firstName" formControlName="firstName" required>
+      </div>
+      <div>
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" formControlName="lastName" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" required>
+      </div>
+      <div>
+        <label for="degree">Degree:</label>
+        <input id="degree" formControlName="degree" required>
+      </div>
+      <div>
+        <label for="year">Year:</label>
+        <input id="year" formControlName="year" required>
+      </div>
+      <button type="submit">Create</button>
+      <button routerLink="/students">Cancel</button>
+    </form>
+  </div>

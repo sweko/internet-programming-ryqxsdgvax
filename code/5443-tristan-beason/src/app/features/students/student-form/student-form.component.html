@@ -1,0 +1,133 @@
+<div class="student-form-container">
+  @if (loading) {
+    <div class="loading">Loading...</div>
+  } @else if (error) {
+    <div class="error">{{ error }}</div>
+  } @else {
+    <div class="header">
+      <h1>{{ isEditMode ? 'Edit' : 'Create' }} Student</h1>
+      <div class="actions">
+        <button class="btn-cancel" (click)="cancel()">Cancel</button>
+        <button class="btn-save" (click)="onSubmit()">Save</button>
+      </div>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+      <div class="form-grid">
+        <!-- Student ID -->
+        <div class="form-field">
+          <label for="studentId">
+            Student ID 
+            <span class="format-hint">(Format: 2025-XXXX)</span>
+          </label>
+          <input 
+            id="studentId"
+            type="text"
+            formControlName="studentId"
+            placeholder="2025-1234"
+          >
+          @if (form.get('studentId')?.touched && form.get('studentId')?.invalid) {
+            <div class="error-message">
+              {{ getErrorMessage('studentId') }}
+            </div>
+          }
+          <div class="field-hint">
+            Must start with current year (2025) followed by a hyphen and 4 digits
+          </div>
+        </div>
+
+        <!-- First Name -->
+        <div class="form-field">
+          <label for="firstName">First Name</label>
+          <input 
+            id="firstName"
+            type="text"
+            formControlName="firstName"
+          >
+          @if (form.get('firstName')?.touched && form.get('firstName')?.invalid) {
+            <div class="error-message">
+              {{ getErrorMessage('firstName') }}
+            </div>
+          }
+        </div>
+
+        <!-- Last Name -->
+        <div class="form-field">
+          <label for="lastName">Last Name</label>
+          <input 
+            id="lastName"
+            type="text"
+            formControlName="lastName"
+          >
+          @if (form.get('lastName')?.touched && form.get('lastName')?.invalid) {
+            <div class="error-message">
+              {{ getErrorMessage('lastName') }}
+            </div>
+          }
+        </div>
+
+        <!-- Date of Birth -->
+        <div class="form-field">
+          <label for="dateOfBirth">Date of Birth</label>
+          <input 
+            id="dateOfBirth"
+            type="date"
+            formControlName="dateOfBirth"
+          >
+          @if (form.get('dateOfBirth')?.touched && form.get('dateOfBirth')?.invalid) {
+            <div class="error-message">
+              {{ getErrorMessage('dateOfBirth') }}
+            </div>
+          }
+        </div>
+
+        <!-- Email -->
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input 
+            id="email"
+            type="email"
+            formControlName="email"
+          >
+          @if (form.get('email')?.touched && form.get('email')?.invalid) {
+            <div class="error-message">
+              {{ getErrorMessage('email') }}
+            </div>
+          }
+        </div>
+
+        <!-- Degree -->
+        <div class="form-field">
+          <label for="degree">Degree</label>
+          <select id="degree" formControlName="degree">
+            <option value="">Select a degree</option>
+            @for (degree of degrees; track degree) {
+              <option [value]="degree">{{ degree }}</option>
+            }
+          </select>
+          @if (form.get('degree')?.touched && form.get('degree')?.invalid) {
+            <div class="error-message">
+              {{ getErrorMessage('degree') }}
+            </div>
+          }
+        </div>
+
+        <!-- Year -->
+        <div class="form-field">
+          <label for="year">Year</label>
+          <select id="year" formControlName="year">
+            <option value="">Select year</option>
+            @for (year of [1,2,3,4]; track year) {
+              <option [value]="year">Year {{ year }}</option>
+            }
+          </select>
+          @if (form.get('year')?.touched && form.get('year')?.invalid) {
+            <div class="error-message">
+              {{ getErrorMessage('year') }}
+            </div>
+          }
+        </div>
+      </div>
+    </form>
+  }
+</div> 

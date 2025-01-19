@@ -1,0 +1,62 @@
+/* Container for the student list */
+.student-list-container {
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Search input styling */
+  input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+  }
+  
+  /* Header styling */
+  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  /* Hover effect on table rows */
+  tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  /* Button and link styling */
+  a {
+    margin-right: 0.5rem;
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    table {
+      font-size: 0.9rem;
+    }
+  
+    input[type="text"] {
+      font-size: 0.9rem;
+    }
+  }
+  

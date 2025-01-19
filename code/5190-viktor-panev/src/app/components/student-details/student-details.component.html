@@ -1,0 +1,28 @@
+<div *ngIf="student">
+    <h1>{{ student.firstName }} {{ student.lastName }}</h1>
+    <p><strong>Student ID:</strong> {{ student.studentId }}</p>
+    <p><strong>Email:</strong> {{ student.email }}</p>
+    <p><strong>Degree:</strong> {{ student.degree }}</p>
+    <p><strong>Year of Study:</strong> {{ student.year }}</p>
+  
+    <h2>Courses</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Semester</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let course of student.courses">
+          <td>{{ course.code }}</td>
+          <td>{{ course.semester }}</td>
+          <td>{{ course.grade ? course.grade.percentage + '%' : 'Not Graded' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <button [routerLink]="['/students', student.id, 'edit']">Edit</button>
+    <button [routerLink]="['/students']">Back to List</button>
+  </div>

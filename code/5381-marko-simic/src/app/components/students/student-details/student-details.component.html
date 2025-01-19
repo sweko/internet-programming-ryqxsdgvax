@@ -1,0 +1,9 @@
+<h2>Student Details</h2>
+<div *ngIf="student">
+  <p><strong>Student ID:</strong> {{ student.studentId }}</p>
+  <p><strong>Name:</strong> {{ student.firstName }} {{ student.lastName }}</p>
+  <p><strong>Email:</strong> {{ student.email }}</p>
+  <p><strong>Degree:</strong> {{ student.degree }}</p>
+  <p><strong>Year of Study:</strong> {{ student.year }}</p>
+  <a [routerLink]="['/students']" class="btn">Back to List</a>
+</div>

@@ -1,0 +1,86 @@
+<div class="students-container">
+  <h2>Student List</h2>
+
+  <!-- Filters -->
+  <div class="filters">
+    <input
+      type="text"
+      placeholder="Search by ID or Name"
+      [(ngModel)]="searchQuery"
+      (input)="applyFilters()"
+    />
+    <select [(ngModel)]="selectedDegree" (change)="applyFilters()">
+      <option value="">All Degrees</option>
+      <option *ngFor="let degree of ['CS', 'IT', 'ECE']" [value]="degree">
+        {{ degree }}
+      </option>
+    </select>
+    <div>
+      <label *ngFor="let year of [1, 2, 3, 4]">
+        <input
+          type="checkbox"
+          [value]="year"
+          [(ngModel)]="selectedYears"
+          (change)="applyFilters()"
+        />
+        Year {{ year }}
+      </label>
+    </div>
+    <input
+      type="number"
+      placeholder="Min Grade"
+      [(ngModel)]="minGrade"
+      (input)="applyFilters()"
+    />
+    <input
+      type="number"
+      placeholder="Max Grade"
+      [(ngModel)]="maxGrade"
+      (input)="applyFilters()"
+    />
+  </div>
+
+  <!-- Toggle Name Format -->
+  <button (click)="toggleNameFormat()">Toggle Name Format</button>
+
+  <!-- Student Table -->
+  <table>
+    <thead>
+      <tr>
+        <th (click)="sort('studentId')">ID</th>
+        <th (click)="sort('firstName')">Name</th>
+        <th (click)="sort('degree')">Degree</th>
+        <th (click)="sort('year')">Year</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of paginatedStudents">
+        <td>{{ student.studentId }}</td>
+        <td>
+          {{ nameFormat === 'firstLast'
+            ? student.firstName + ' ' + student.lastName
+            : student.lastName + ', ' + student.firstName }}
+        </td>
+        <td>{{ student.degree }}</td>
+        <td>{{ student.year }}</td>
+        <td>
+          <button [routerLink]="['/students', student.id]">View</button>
+          <button [routerLink]="['/students', student.id, 'edit']">Edit</button>
+          <button (click)="deleteStudent(student.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <button
+      *ngFor="let page of [].constructor(Math.ceil(totalStudents / itemsPerPage))"
+      [class.active]="currentPage === page + 1"
+      (click)="changePage(page + 1)"
+    >
+      {{ page + 1 }}
+    </button>
+  </div>
+</div>

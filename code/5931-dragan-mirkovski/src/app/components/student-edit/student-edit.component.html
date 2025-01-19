@@ -1,0 +1,11 @@
+<section class="student-edit">
+    <h2>Edit Student</h2>
+    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+      <label>First Name: <input formControlName="firstName" /></label>
+      <label>Last Name: <input formControlName="lastName" /></label>
+      <label>Email: <input formControlName="email" /></label>
+      <label>Degree: <input formControlName="degree" /></label>
+      <button type="submit" [disabled]="studentForm.invalid">Save</button>
+    </form>
+  </section>
+  

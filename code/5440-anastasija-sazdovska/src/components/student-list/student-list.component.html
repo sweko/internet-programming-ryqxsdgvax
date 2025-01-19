@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="header">
+    <div class="title-section">
+      <h2>Student Management</h2>
+      <p class="subtitle">Total Students: {{ totalStudents }}</p>
+    </div>
+    <button routerLink="/students/create" class="btn-primary">
+      <span class="icon">+</span> Add New Student
+    </button>
+  </div>
+
+  <div class="filters">
+    <div class="search-box">
+      <input 
+        type="text" 
+        [(ngModel)]="searchTerm" 
+        placeholder="Search by name or ID..."
+        class="search-input"
+      />
+    </div>
+    <select [(ngModel)]="selectedYear" class="year-filter">
+      <option [ngValue]="null">All Years</option>
+      <option [ngValue]="1">Year 1</option>
+      <option [ngValue]="2">Year 2</option>
+      <option [ngValue]="3">Year 3</option>
+      <option [ngValue]="4">Year 4</option>
+    </select>
+  </div>
+
+  <div class="content">
+    <div *ngIf="loading" class="loading-spinner">
+      <div class="spinner"></div>
+      <p>Loading students...</p>
+    </div>
+
+    <div *ngIf="error" class="error-message">
+      {{ error }}
+      <button (click)="loadStudents()" class="btn-secondary">Retry</button>
+    </div>
+
+    <div *ngIf="!loading && !error" class="table-container">
+      <table *ngIf="filteredStudents.length > 0">
+        <thead>
+          <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Degree</th>
+            <th>Year</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of filteredStudents" class="student-row">
+            <td>{{ student.studentId }}</td>
+            <td>{{ student.firstName }} {{ student.lastName }}</td>
+            <td>{{ student.degree }}</td>
+            <td>
+              <span class="year-badge year-{{student.year}}">
+                Year {{ student.year }}
+              </span>
+            </td>
+            <td>{{ student.email }}</td>
+            <td class="actions">
+              <button [routerLink]="['/students', student.id]" class="btn-info">View</button>
+              <button [routerLink]="['/students', student.id, 'edit']" class="btn-warning">Edit</button>
+              <button (click)="deleteStudent(student.id, $event)" class="btn-danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div *ngIf="filteredStudents.length === 0" class="no-results">
+        <div class="empty-state">
+          <svg viewBox="0 0 24 24" class="empty-icon">
+            <path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM10 4h4v2h-4V4z"/>
+          </svg>
+          <h3>No Students Found</h3>
+          <p>Try adjusting your filters or add a new student.</p>
+          <button routerLink="/students/create" class="btn-primary">Add Student</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

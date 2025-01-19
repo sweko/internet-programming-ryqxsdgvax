@@ -1,0 +1,37 @@
+.student-details {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 30px auto;
+  }
+  
+  .student-details h2 {
+    text-align: center;
+    color: #4CAF50;
+  }
+  
+  .student-details p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .student-details .actions {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .student-details button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .student-details button:hover {
+    background-color: #45a049;
+  }
+  

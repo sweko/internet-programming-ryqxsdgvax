@@ -1,0 +1,10 @@
+<section class="statistics">
+  <h2>Statistics</h2>
+  <p><strong>Total Students:</strong> {{ totalStudents }}</p>
+  <h3>Students Per Degree</h3>
+  <ul>
+    <li *ngFor="let degree of getKeys(studentsPerDegree)">
+      {{ degree }}: {{ studentsPerDegree[degree] }}
+    </li>
+  </ul>
+</section>

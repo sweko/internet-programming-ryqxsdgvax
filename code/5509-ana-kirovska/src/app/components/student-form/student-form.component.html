@@ -1,0 +1,69 @@
+<div class="flex justify-center items-center min-h-screen p-4">
+  <div class="w-3/4">
+    <h2>{{ isEditMode ? 'Edit Student' : 'Add Student' }}</h2>
+    <form [formGroup]="studentForm" (ngSubmit)="submit()" class="space-y-4">
+      <div class="flex flex-col space-y-2">
+        <label for="firstName">First Name</label>
+        <mat-form-field appearance="outline" class="w-full">
+          <input matInput formControlName="firstName" id="firstName" />
+          <mat-error *ngIf="studentForm.get('firstName')?.invalid">First name is required</mat-error>
+        </mat-form-field>
+
+        <label for="lastName">Last Name</label>
+        <mat-form-field appearance="outline" class="w-full">
+          <input matInput formControlName="lastName" id="lastName" />
+          <mat-error *ngIf="studentForm.get('lastName')?.invalid">Last name is required</mat-error>
+        </mat-form-field>
+
+        <div *ngIf="!isEditMode">
+          <label for="studentId">Student ID</label>
+          <mat-form-field appearance="outline" class="w-full">
+            <input matInput formControlName="studentId" id="studentId" />
+            <mat-error *ngIf="studentForm.get('studentId')?.invalid">Student ID is required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <label for="email">Email</label>
+        <mat-form-field appearance="outline" class="w-full">
+          <input matInput formControlName="email" id="email" />
+          <mat-error *ngIf="studentForm.get('email')?.invalid">Email is required</mat-error>
+        </mat-form-field>
+
+        <label for="dateOfBirth">Date of Birth</label>
+        <mat-form-field appearance="outline" class="w-full">
+          <input matInput type="date" formControlName="dateOfBirth" id="dateOfBirth" />
+          <mat-error *ngIf="studentForm.get('dateOfBirth')?.invalid">Date of birth is required</mat-error>
+        </mat-form-field>
+
+        <!-- <label for="degree">Degree</label>
+        <mat-form-field appearance="outline" class="w-full">
+          <input matInput formControlName="degree" id="degree" />
+          <mat-error *ngIf="studentForm.get('degree')?.invalid">Degree is required</mat-error>
+        </mat-form-field> -->
+        <label for="degree">Degree</label>
+        <mat-form-field appearance="outline" class="w-full">
+          <mat-select formControlName="degree" id="degree">
+            <mat-option *ngFor="let degree of degrees" [value]="degree.name">
+              {{ degree.name }}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="studentForm.get('degree')?.invalid">Degree is required</mat-error>
+        </mat-form-field>
+
+
+        <label for="year">Year</label>
+        <mat-form-field appearance="outline" class="w-full">
+          <input matInput formControlName="year" id="year" />
+          <mat-error *ngIf="studentForm.get('year')?.invalid">Year is required</mat-error>
+        </mat-form-field>
+
+        <div class="flex justify-between space-x-4">
+          <button mat-button (click)="goBack()" class="bg-gray-300 px-4 py-2 rounded">Cancel</button>
+          <button mat-raised-button color="primary" [disabled]="studentForm.invalid" class="px-4 py-2 rounded">
+            {{ isEditMode ? 'Update' : 'Save' }}
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

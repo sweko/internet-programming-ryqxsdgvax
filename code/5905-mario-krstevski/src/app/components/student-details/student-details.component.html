@@ -1,0 +1,21 @@
+<div class="student-details">
+    <h2>Student Details</h2>
+    <p><strong>Student ID:</strong> {{ student.studentId }}</p>
+    <p><strong>Name:</strong> {{ student.firstName }} {{ student.lastName }}</p>
+    <p><strong>Date of Birth:</strong> {{ student.dateOfBirth }}</p>
+    <p><strong>Email:</strong> {{ student.email }}</p>
+    <p><strong>Degree:</strong> {{ student.degree }}</p>
+    <p><strong>Year of Study:</strong> {{ student.year }}</p>
+  
+    <h3>Courses</h3>
+    <ul>
+      <li *ngFor="let course of student.courses">
+        {{ course.code }} - {{ course.semester }} - 
+        <span *ngIf="course.grade">Grade: {{ course.grade.percentage }}%</span>
+        <span *ngIf="!course.grade">Not Graded</span>
+      </li>
+    </ul>
+  
+    <button (click)="deleteStudent()">Delete Student</button>
+    <button routerLink="/students">Back to List</button>
+  </div>
