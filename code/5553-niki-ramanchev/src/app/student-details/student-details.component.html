@@ -1,0 +1,51 @@
+<div *ngIf="student; else errorTemplate">
+  <h2>Student Details</h2>
+
+  <h3>Personal Information</h3>
+  <ul>
+    <li><strong>Student ID:</strong> {{ student.studentId }}</li>
+    <li><strong>Full Name:</strong> {{ student.firstName }} {{ student.lastName }}</li>
+    <li><strong>Date of Birth:</strong> {{ student.dateOfBirth }}</li>
+    <li><strong>Email:</strong> {{ student.email }}</li>
+    <li><strong>Degree:</strong> {{ student.degree }}</li>
+    <li><strong>Year of Study:</strong> {{ student.year }}</li>
+  </ul>
+
+  <h3>Academic Information</h3>
+  <ul>
+    <li><strong>Average Grade:</strong> {{ student.averageGrade }}</li>
+    <li><strong>Success Rate:</strong> {{ student.successRate }}</li>
+  </ul>
+
+  <h4>Courses:</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Course Name</th>
+        <th>Year of Study</th>
+        <th>Semester</th>
+        <th>Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let course of student.courses">
+        <td>{{ course.code }}</td>
+        <td>{{ student.year }}</td>
+        <td>{{ course.semester }}</td>
+        <td>
+          {{ course.grade ? course.grade.percentage + ' (' + course.grade.letter + ')' : 'Not Graded' }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="actions">
+    <button (click)="editStudent()">Edit</button>
+    <button (click)="deleteStudent()">Delete</button>
+    <button (click)="goBack()">Back to List</button>
+  </div>
+</div>
+
+<ng-template #errorTemplate>
+  <p>{{ errorMessage }}</p>
+</ng-template>

@@ -1,0 +1,21 @@
+<div class="degree-list-container">
+  <h2>Degree List</h2>
+  <p *ngIf="errorMessage">{{ errorMessage }}</p>
+
+  <table *ngIf="degrees.length > 0">
+    <thead>
+      <tr>
+        <th>Degree Code</th>
+        <th>Degree Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let degree of degrees">
+        <td>{{ degree.code }}</td>
+        <td>{{ degree.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="degrees.length === 0">No degrees available.</p>
+</div>
