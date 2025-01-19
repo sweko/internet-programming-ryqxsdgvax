@@ -1,0 +1,28 @@
+<div>
+  <h2>Degrees List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Degree ID</th>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Years to Complete</th>
+        <th>Active</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let degree of degrees">
+        <td>{{ degree.id }}</td>
+        <td>{{ degree.name }}</td>
+        <td>{{ degree.code }}</td>
+        <td>{{ degree.yearsToComplete }}</td>
+        <td>{{ degree.active ? 'Yes' : 'No' }}</td>
+        <td>
+          <button (click)="viewDegree(degree.id)">View</button>
+          <!-- Additional buttons for editing and deleting can be added here -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

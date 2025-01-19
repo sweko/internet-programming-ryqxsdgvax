@@ -1,0 +1,22 @@
+<div>
+  <h2>Student Details</h2>
+  <div>
+    <p><strong>Student ID:</strong> {{ student.id }}</p>
+    <p><strong>Full Name:</strong> {{ student.firstName }} {{ student.lastName }}</p>
+    <p><strong>Date of Birth:</strong> {{ student.dateOfBirth | date }}</p>
+    <p><strong>Email:</strong> {{ student.email }}</p>
+    <p><strong>Degree:</strong> {{ student.degree }}</p>
+    <p><strong>Year of Study:</strong> {{ student.year }}</p>
+  </div>
+  <h3>Courses</h3>
+  <ul>
+    <li *ngFor="let course of student.courses">
+      <p><strong>Course Name:</strong> {{ course.name }}</p>
+      <p><strong>Semester:</strong> {{ course.semester }}</p>
+      <p><strong>Grade:</strong> {{ course.grade ? course.grade.percentage : 'Not Graded' }}</p>
+    </li>
+  </ul>
+  <button (click)="editStudent(student.id)">Edit</button>
+  <button (click)="deleteStudent(student.id)">Delete</button>
+  <button (click)="goBack()">Back to List</button>
+</div>
