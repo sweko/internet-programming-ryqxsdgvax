@@ -1,0 +1,22 @@
+<div class="statistics">
+    <h1>Statistics</h1>
+    <div>
+        <strong>Total Students:</strong> {{ totalStudents }}
+    </div>
+    <div>
+        <strong>Average Grade:</strong> {{ averageGrade !== null ? averageGrade + '%' : 'N/A' }}
+    </div>
+    <h2>Students Per Degree</h2>
+    <ul>
+        <li *ngFor="let degree of objectKeys(studentsPerDegree)">
+            {{ degree }}: {{ studentsPerDegree[degree] }}
+        </li>
+    </ul>
+    <h2>Students Per Year</h2>
+    <ul>
+        <li *ngFor="let year of objectKeys(studentsPerYear)">
+            Year {{ year }}: {{ studentsPerYear[year] }}
+        </li>
+    </ul>
+</div>
+

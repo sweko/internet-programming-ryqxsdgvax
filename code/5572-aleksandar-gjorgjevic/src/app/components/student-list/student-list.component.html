@@ -1,0 +1,32 @@
+<div class="student-list">
+    <h1>Student List</h1>
+    <div class="controls">
+        <button [routerLink]="['/students/create']" class="button">Add New Student</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Degree</th>
+                <th>Year</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td>{{ student.studentId }}</td>
+                <td>{{ student.firstName }} {{ student.lastName }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.degree }}</td>
+                <td>{{ student.year }}</td>
+                <td>
+                    <button [routerLink]="['/students', student.id]" class="button">View</button>
+                    <button [routerLink]="['/students', student.id, 'edit']" class="button">Edit</button>
+                    <button (click)="deleteStudent(student.id)" class="button delete">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

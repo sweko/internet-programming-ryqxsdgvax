@@ -1,0 +1,53 @@
+<div class="student-form-container">
+    <h2 class="form-title">Create New Student</h2>
+  
+    <form [formGroup]="studentForm" (ngSubmit)="createStudent()" class="student-form">
+      
+      <div class="form-group">
+        <label for="firstName" class="label">First Name</label>
+        <input id="firstName" formControlName="firstName" type="text" class="input" placeholder="Enter First Name"/>
+        <div *ngIf="studentForm.get('firstName')?.invalid && studentForm.get('firstName')?.touched" class="error-message">
+          First name is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="lastName" class="label">Last Name</label>
+        <input id="lastName" formControlName="lastName" type="text" class="input" placeholder="Enter Last Name"/>
+        <div *ngIf="studentForm.get('lastName')?.invalid && studentForm.get('lastName')?.touched" class="error-message">
+          Last name is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="email" class="label">Email</label>
+        <input id="email" formControlName="email" type="email" class="input" placeholder="Enter Email Address"/>
+        <div *ngIf="studentForm.get('email')?.invalid && studentForm.get('email')?.touched" class="error-message">
+          Enter a valid email address.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="degree" class="label">Degree</label>
+        <input id="degree" formControlName="degree" type="text" class="input" placeholder="Enter Degree"/>
+        <div *ngIf="studentForm.get('degree')?.invalid && studentForm.get('degree')?.touched" class="error-message">
+          Degree is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="year" class="label">Year</label>
+        <input id="year" formControlName="year" type="number" class="input" placeholder="Enter Year (1-4)"/>
+        <div *ngIf="studentForm.get('year')?.invalid && studentForm.get('year')?.touched" class="error-message">
+          Year must be between 1 and 4.
+        </div>
+      </div>
+  
+      <div class="form-actions">
+        <button type="submit" [disabled]="studentForm.invalid" class="btn-submit">Create</button>
+        <button type="button" (click)="router.navigate(['/students'])" class="btn-cancel">Cancel</button>
+      </div>
+  
+    </form>
+  </div>
+  

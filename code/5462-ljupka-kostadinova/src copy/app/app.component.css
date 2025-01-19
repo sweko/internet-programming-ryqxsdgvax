@@ -1,0 +1,23 @@
+.main-content {
+  min-height: calc(
+    100vh - 240px
+  ); 
+  padding: var(--spacing-xl) 0;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .navbar-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
