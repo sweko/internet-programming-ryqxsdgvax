@@ -11,7 +11,10 @@ import { delay, Observable, Subject, takeUntil } from 'rxjs';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  // This file should be refactored, feel free to move the code around, create new files, or delete it altogether.
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
+  
   currentYear: number = 0;
 
   welcomeMessage = 'Welcome to the Student Management System!';

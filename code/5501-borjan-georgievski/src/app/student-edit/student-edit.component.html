@@ -1,0 +1,123 @@
+<div class="student-edit-container">
+    <h1>Edit Student</h1>
+  
+    <form #editForm="ngForm" (ngSubmit)="saveStudent(editForm)" *ngIf="student">
+      <div class="personal-info">
+        <h2>Personal Information</h2>
+        <div>
+          <label for="firstName">First Name</label>
+          <input
+            id="firstName"
+            type="text"
+            [(ngModel)]="student.firstName"
+            name="firstName"
+            required
+            #firstName="ngModel"
+          />
+          <div *ngIf="firstName.invalid && firstName.touched">First name is required</div>
+        </div>
+  
+        <div>
+          <label for="lastName">Last Name</label>
+          <input
+            id="lastName"
+            type="text"
+            [(ngModel)]="student.lastName"
+            name="lastName"
+            required
+            #lastName="ngModel"
+          />
+          <div *ngIf="lastName.invalid && lastName.touched">Last name is required</div>
+        </div>
+  
+        <div>
+          <label for="studentId">Student ID</label>
+          <input
+            id="studentId"
+            type="text"
+            [(ngModel)]="student.studentId"
+            name="studentId"
+            required
+            #studentId="ngModel"
+          />
+          <div *ngIf="studentId.invalid && studentId.touched">Student ID is required</div>
+        </div>
+  
+        <div>
+          <label for="dateOfBirth">Date of Birth</label>
+          <input
+            id="dateOfBirth"
+            type="date"
+            [(ngModel)]="student.dateOfBirth"
+            name="dateOfBirth"
+            required
+            #dateOfBirth="ngModel"
+          />
+          <div *ngIf="dateOfBirth.invalid && dateOfBirth.touched">Date of birth is required</div>
+        </div>
+  
+        <div>
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            [(ngModel)]="student.email"
+            name="email"
+            required
+            email
+            #email="ngModel"
+          />
+          <div *ngIf="email.invalid && email.touched">Please enter a valid email</div>
+        </div>
+  
+        <div>
+          <label for="degree">Degree</label>
+          <select id="degree" [(ngModel)]="selectedDegree" name="degree" (change)="setAvailableYears()" required>
+            <option [ngValue]="null">Select a degree</option>
+            <option *ngFor="let degree of degrees" [ngValue]="degree">
+              {{ degree.name }} ({{ degree.code }})
+            </option>
+          </select>
+        </div>
+  
+        <div>
+          <label for="year">Year of Study</label>
+          <select
+            id="year"
+            [(ngModel)]="student.year"
+            name="year"
+            required
+          >
+            <option [ngValue]="null">Select year</option>
+            <option *ngFor="let year of availableYears" [ngValue]="year">Year {{ year }}</option>
+          </select>
+        </div>
+      </div>
+  
+      <div class="course-management">
+        <h2>Course Management</h2>
+        <ul>
+          <li *ngFor="let course of student.courses">
+            <strong>{{ course.code }}</strong> - {{ course.name }}<br />
+            <span>Year {{ course.yearOfStudy }} - {{ course.semester }} semester</span><br />
+            <strong>Grade:</strong>
+            <span *ngIf="course.grade">
+              {{ course.grade.letter }} ({{ course.grade.percentage }}%)
+            </span>
+            <span *ngIf="!course.grade">
+              <input
+                type="number"
+                placeholder="Percentage"
+                [(ngModel)]="course.grade"
+                [ngModelOptions]="{standalone: true}"
+                min="0"
+                max="100"
+              />
+            </span>
+          </li>
+        </ul>
+      </div>
+  
+      <button type="submit" [disabled]="editForm.invalid">Save</button>
+    </form>
+  </div>
