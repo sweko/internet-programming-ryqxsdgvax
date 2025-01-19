@@ -1,0 +1,11 @@
+<section class="student-list">
+    <h2>Student List</h2>
+    <ul>
+      <li *ngFor="let student of students">
+        {{ student.firstName }} {{ student.lastName }}
+        <a [routerLink]="'/students/' + student.id">Details</a>
+        <a [routerLink]="'/students/' + student.id + '/edit'">Edit</a>
+      </li>
+    </ul>
+  </section>
+  

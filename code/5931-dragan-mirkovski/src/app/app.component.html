@@ -24,12 +24,6 @@
 </main>
 
 <!-- This should be moved to a footer component -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <p>&copy; {{currentYear}} University Management System</p>
-      <p>Student: <span>Your Name</span> | ID: <span>12345</span></p>
-      <a routerLink="/about" class="footer-link">About</a>
-    </div>
-  </div>
-</footer>
+<app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

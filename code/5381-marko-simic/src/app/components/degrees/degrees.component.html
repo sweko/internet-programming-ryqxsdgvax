@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>Degrees</h2>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Code</th>
+          <th>Years to Complete</th>
+          <th>Status</th>
+          <th>Percentage Completion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let degree of degrees">
+          <td>{{ degree.id }}</td>
+          <td>{{ degree.name }}</td>
+          <td>{{ degree.code }}</td>
+          <td>{{ degree.yearsToComplete }}</td>
+          <td>{{ degree.active ? 'Active' : 'Inactive' }}</td>
+          <td>{{ degree.percentage }}%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

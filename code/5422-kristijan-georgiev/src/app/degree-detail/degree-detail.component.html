@@ -1,0 +1,10 @@
+<div *ngIf="grade">
+    <h2 style="color: rgb(0, 0, 0);">Grade Details</h2>
+    <p style="color: rgb(0, 0, 0);"><strong>ID:</strong> {{ grade.id}}</p>
+    <p style="color: rgb(0, 0, 0);"><strong>Percentage:</strong> {{ grade.percentage}}</p>
+    <p style="color: rgb(0, 0, 0);"><strong>Letter:</strong> {{ grade.letter }}</p>
+    <div style="margin-top: 10px;">
+        <button style="background-color: firebrick; color: white;" type="button" class="back-button" (click)="goToDegreeList()">Back</button>
+      </div>
+  </div>
+  

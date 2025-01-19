@@ -1,0 +1,21 @@
+<h2>Degree Programs</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Code</th>
+      <th>Years to Complete</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let degree of degrees">
+      <td><strong>{{ degree.id }}</strong></td>
+      <td>{{ degree.name }}</td>
+      <td>{{ degree.code }}</td>
+      <td>{{ degree.yearsToComplete }}</td>
+      <td>{{ degree.active ? 'Yes' : 'No' }}</td>
+    </tr>
+  </tbody>
+</table>

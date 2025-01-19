@@ -1,0 +1,16 @@
+<div *ngIf="student">
+    <h2 style="color: rgb(0, 0, 0);">Student Details</h2>
+    <p style="color: rgb(0, 0, 0);"><strong>ID:</strong> {{ student.id }}</p>
+    <p style="color: rgb(0, 0, 0);"><strong>FirstName:</strong> {{ student.firstName}}</p>
+    <p style="color: rgb(0, 0, 0);"><strong>LastName:</strong> {{ student.lastName }}</p>
+    <p style="color: rgb(0, 0, 0);"><strong>StudentId:</strong> {{ student.studentId }}</p>
+    <p style="color: rgb(0, 0, 0);"><strong>DateOfBirth:</strong> {{ student.dateOfBirth }}</p>
+    <p style="color: rgb(0, 0, 0);"><strong>Email:</strong> {{ student.email }}</p>
+    <p style="color: rgb(0, 0, 0);"><strong>Degree:</strong> {{ student.degree }}</p>
+    <p style="color: rgb(0, 0, 0);"><strong>Year:</strong> {{ student.year }}</p>
+  
+    <div style="margin-top: 10px;">
+        <button style="background-color: firebrick; color: white;" type="button" class="back-button" (click)="goToStudentList()">Back</button>
+      </div>
+  </div>
+  

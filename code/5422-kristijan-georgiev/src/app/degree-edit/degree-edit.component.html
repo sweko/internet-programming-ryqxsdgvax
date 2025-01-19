@@ -1,0 +1,12 @@
+<div *ngIf="grade">
+    <h2>Edit Degree</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input [(ngModel)]="grade.percentage" name="percentage" type="number" />
+
+        <label for="letter">Letter:</label>
+        <input [(ngModel)]="grade.letter" name="letter" />
+
+        <button style="background-color: rgb(23, 124, 218); color: white;" (click)="saveChanges()">Save Changes</button>
+    </form>
+</div>

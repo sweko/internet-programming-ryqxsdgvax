@@ -1,0 +1,49 @@
+<h2>Edit Student</h2>
+
+<form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="firstName">First Name:</label>
+    <input id="firstName" formControlName="firstName" required>
+  </div>
+
+  <div>
+    <label for="lastName">Last Name:</label>
+    <input id="lastName" formControlName="lastName" required>
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" required>
+  </div>
+
+  <div>
+    <label for="degree">Degree:</label>
+    <select id="degree" formControlName="degree" required>
+      <option *ngFor="let degree of degrees" [value]="degree">{{degree}}</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="year">Year:</label>
+    <input id="year" type="number" formControlName="year" required min="1" max="6">
+  </div>
+
+  <h3>Courses</h3>
+  <table>
+    <tr>
+      <th>Course Code</th>
+      <th>Grade</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let course of student?.courses">
+      <td>{{course.code}}</td>
+      <td>{{course.grade?.letter || 'Not graded'}}</td>
+      <td>
+        
+        <!-- <button *ngIf="!course.grade" (click)="addGrade(course.id)">Add Grade</button> -->
+      </td>
+    </tr>
+  </table>
+
+  <button type="submit">Save</button>
+</form>

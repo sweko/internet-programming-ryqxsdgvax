@@ -1,0 +1,50 @@
+<div>
+    <h2>Edit Student</h2>
+  
+    <form
+     [formGroup]="studentForm" (ngSubmit)="saveStudent()">
+      <div>
+        <label for="firstName">First Name</label>
+        <input id="firstName" formControlName="firstName" type="text" />
+        <div *ngIf="studentForm.get('firstName')?.invalid && studentForm.get('firstName')?.touched">
+          First name is required.
+        </div>
+      </div>
+  
+      <div>
+        <label for="lastName">Last Name</label>
+        <input id="lastName" formControlName="lastName" type="text" />
+        <div *ngIf="studentForm.get('lastName')?.invalid && studentForm.get('lastName')?.touched">
+          Last name is required.
+        </div>
+      </div>
+  
+      <div>
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" type="email" />
+        <div *ngIf="studentForm.get('email')?.invalid && studentForm.get('email')?.touched">
+          Enter a valid email address.
+        </div>
+      </div>
+  
+      <div>
+        <label for="degree">Degree</label>
+        <input id="degree" formControlName="degree" type="text" />
+        <div *ngIf="studentForm.get('degree')?.invalid && studentForm.get('degree')?.touched">
+          Degree is required.
+        </div>
+      </div>
+  
+      <div>
+        <label for="year">Year</label>
+        <input id="year" formControlName="year" type="number" />
+        <div *ngIf="studentForm.get('year')?.invalid && studentForm.get('year')?.touched">
+          Year must be between 1 and 4.
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="studentForm.invalid">Save</button>
+      <button type="button" (click)="router.navigate(['/students'])">Cancel</button>
+    </form>
+  </div>
+  

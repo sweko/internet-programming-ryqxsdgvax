@@ -1,0 +1,65 @@
+/* Just adding these to the existing styles */
+
+.btn-primary, .btn-view, .btn-edit, .btn-delete {
+  backdrop-filter: blur(8px);
+  font-family: 'Montserrat', var(--font-primary);
+  letter-spacing: 0.3px;
+}
+
+.student-table th {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+.student-table tbody tr {
+  backdrop-filter: blur(4px);
+}
+
+.filters {
+  backdrop-filter: blur(15px);
+}
+
+.header h1 {
+  text-shadow: 0 0 20px rgba(0, 255, 208, 0.2);
+}
+
+.nav-link {
+  backdrop-filter: blur(5px);
+}
+
+.info-card, .project-title {
+  backdrop-filter: blur(12px);
+}
+
+input, select {
+  backdrop-filter: blur(8px);
+  letter-spacing: 0.3px;
+}
+
+.pagination button {
+  font-family: 'Montserrat', var(--font-primary);
+  backdrop-filter: blur(8px);
+}
+
+.footer {
+  backdrop-filter: blur(15px);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: var(--border-radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-light);
+} 

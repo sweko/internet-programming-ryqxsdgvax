@@ -1,0 +1,87 @@
+
+.search-container {
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+ 
+  .student-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .student-table thead tr {
+    background-color: #1976d2;
+    color: white;
+  }
+  
+  .student-table th,
+  .student-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .student-table th {
+    font-weight: bold;
+  }
+  
+  .student-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .student-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+
+  .view-link,
+  .edit-link,
+  .delete-button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .view-link {
+    background-color: #4caf50; 
+  }
+  .edit-link {
+    background-color: #ffc107; 
+  }
+  
+  .delete-button {
+    background-color: #f44336; 
+  }
+  
+  .view-link:hover {
+    background-color: #45a049;
+  }
+  
+  .edit-link:hover {
+    background-color: #e0a800;
+  }
+  
+  .delete-button:hover {
+    background-color: #d32f2f;
+  }
+  

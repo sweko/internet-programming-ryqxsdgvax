@@ -1,0 +1,15 @@
+/* Styles for the Student Create component */
+.create-form {
+  margin: 20px;
+}
+
+.create-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.create-form input, .create-form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}

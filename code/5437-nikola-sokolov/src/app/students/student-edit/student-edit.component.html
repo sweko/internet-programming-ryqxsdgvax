@@ -1,0 +1,27 @@
+<div>
+    <h1>Edit Student</h1>
+    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="firstName">First Name:</label>
+        <input id="firstName" formControlName="firstName" />
+      </div>
+      <div>
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" formControlName="lastName" />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" />
+      </div>
+      <div>
+        <label for="degree">Degree:</label>
+        <input id="degree" formControlName="degree" />
+      </div>
+      <div>
+        <label for="year">Year:</label>
+        <input id="year" type="number" formControlName="year" />
+      </div>
+      <button type="submit" [disabled]="studentForm.invalid">Save Changes</button>
+    </form>
+  </div>
+  

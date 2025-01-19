@@ -1,0 +1,76 @@
+<div class="row d-flex justify-content-center w-100 text-light mt-5 vh-100">
+  <div class="col-11">
+    <div class="col-12 mb-4 p-3">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <mat-card class="p-4 w-100">
+          <mat-card-content>
+            <h4 class="fw-light mb-3">Edit Student with ID: {{studentId}}</h4>
+            <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <mat-form-field class="col-6">
+                  <mat-label>First Name</mat-label>
+                  <input matInput formControlName="firstName">
+                  <mat-error *ngIf="studentForm.get('firstName')?.errors?.['required']">
+                    First Name is required
+                  </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="col-6">
+                  <mat-label>Last Name</mat-label>
+                  <input matInput formControlName="lastName">
+                  <mat-error *ngIf="studentForm.get('lastName')?.errors?.['required']">
+                    Last Name is required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+
+              <div class="row">
+                <mat-form-field class="col-6">
+                  <mat-label>Email</mat-label>
+                  <input matInput formControlName="email" type="email">
+                  <mat-error *ngIf="studentForm.get('email')?.errors?.['required']">
+                    Email is required
+                  </mat-error>
+                  <mat-error *ngIf="studentForm.get('email')?.errors?.['email']">
+                    Enter a valid email address
+                  </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="col-6">
+                  <mat-label>Degree</mat-label>
+                  <mat-select formControlName="degree">
+                    <mat-option *ngFor="let degree of degrees" [value]="degree.code">{{ degree.name }}</mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="studentForm.get('degree')?.errors?.['required']">
+                    Degree is required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+
+              <div class="row">
+                <mat-form-field class="col-6">
+                  <mat-label>Year</mat-label>
+                  <input matInput formControlName="year" type="number">
+                  <mat-error *ngIf="studentForm.get('year')?.errors?.['required']">
+                    Year is required
+                  </mat-error>
+                  <mat-error *ngIf="studentForm.get('year')?.errors?.['min']">
+                    Year must be at least 1
+                  </mat-error>
+                </mat-form-field>
+              </div>
+
+
+
+              <div class="d-flex justify-content-end">
+                <button mat-flat-button color="primary" type="submit" class="px-5" [disabled]="!studentForm.valid">
+                  Save
+                </button>
+              </div>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<h2>Courses</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Code</th>
+      <th>Semester</th>
+      <th>Year of study</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of courses">
+      <td><strong>{{ course.id }}</strong></td>
+      <td>{{ course.name }}</td>
+      <td>{{ course.code }}</td>
+      <td>{{ course.semester }}</td>
+      <td>{{ course.yearOfStudy}}</td>
+    </tr>
+  </tbody>
+</table>
