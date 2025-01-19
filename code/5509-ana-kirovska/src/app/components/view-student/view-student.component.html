@@ -1,0 +1,78 @@
+<div class="flex flex-col">
+  <div class="flex justify-between items-center w-full">
+    <button class="flex items-center px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+      [routerLink]="['/students']">
+      <span class="material-icons mr-2">arrow_back</span>
+    </button>
+    <h2 class="text-center w-full">Student Details</h2>
+  </div>
+  <div class="flex justify-center items-center space-y-4 flex-col">
+    <!-- Personal Information Card -->
+    <mat-card *ngIf="student" class="w-96 p-5 shadow-lg">
+      <mat-card-header>
+        <mat-card-title class="text-xl font-bold">{{ student.firstName }} {{student.lastName}}</mat-card-title>
+        <mat-card-subtitle>Student ID: {{ student.studentId }}</mat-card-subtitle>
+      </mat-card-header>
+  
+      <mat-card-content>
+        <p><strong>Email:</strong> {{ student.email }}</p>
+        <p><strong>Date of Birth:</strong> {{ student.dateOfBirth }}</p>
+        <p><strong>Degree:</strong> {{ student.degree }}</p>
+        <p><strong>Year:</strong> {{ student.year }}</p>
+      </mat-card-content>
+    </mat-card>
+  
+    <!-- Academic Information Card -->
+    <mat-card *ngIf="student" class=" shadow-lg">
+      <mat-card-header>
+        <mat-card-title class="text-xl font-bold">Academic Information</mat-card-title>
+      </mat-card-header>
+  
+      <mat-card-content>
+        <div *ngIf="student.courses.length > 0; else noCourses">
+          <table class="min-w-full table-auto">
+            <thead>
+              <tr>
+                <th class="px-4 py-2 text-left">Course Code</th>
+                <th class="px-4 py-2 text-left">Semester</th>
+                <th class="px-4 py-2 text-left">Grade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let course of student.courses">
+                <td class="px-4 py-2">{{ course.code }}</td>
+                <td class="px-4 py-2">{{ course.semester  }}</td>
+                <td class="px-4 py-2">
+                  <span *ngIf="course.grade">
+                    {{ course.grade.letter }} ({{ course.grade.percentage }}%)
+                  </span>
+                  <span *ngIf="!course.grade">No grade available</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ng-template #noCourses>
+          <p>No courses found for this student.</p>
+        </ng-template>
+      </mat-card-content>
+    </mat-card>
+  
+    <div class="flex justify-between w-full">
+        <button class="flex items-center px-4 py-2 text-white bg-yellow-600 rounded-md hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          [routerLink]="['/students', student?.id, 'edit']">
+          <span class="material-icons mr-2">edit</span>
+          Update
+        </button>
+      
+  
+        <button class="flex items-center px-4 py-2 text-white bg-red-600 rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400"
+        >
+          <span class="material-icons mr-2">delete</span>
+          Delete
+        </button>    
+    </div>
+  
+    <div *ngIf="!student" class="text-center text-red-500">Student not found.</div>
+  </div>
+</div>

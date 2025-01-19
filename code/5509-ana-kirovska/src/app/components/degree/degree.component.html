@@ -1,0 +1,63 @@
+<div class="">
+    <div>
+        <h2>Degrees</h2>
+    </div>
+    <div>
+        <table id="degree-table" mat-table [dataSource]="degreeDataSource" matSort class="mt-3">
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef class="" mat-sort-header sortActionDescription="Sort by Id"> Id</th>
+              <td mat-cell *matCellDef="let degree" class=""> {{ degree.id }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef class="" mat-sort-header sortActionDescription="Sort by Name">Name
+              </th>
+              <td mat-cell *matCellDef="let degree" class=""> {{ degree.name }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="code">
+              <th mat-header-cell *matHeaderCellDef class="" mat-sort-header sortActionDescription="Sort by Code"> Code
+              </th>
+              <td mat-cell *matCellDef="let degree" class=""> {{ degree.code }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="yearsToComplete">
+              <th mat-header-cell *matHeaderCellDef class="" mat-sort-header sortActionDescription="Sort by Years to Complete"> Year to Complete</th>
+              <td mat-cell *matCellDef="let degree" class=""> {{ degree.yearsToComplete }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="active">
+              <th mat-header-cell *matHeaderCellDef class="" mat-sort-header sortActionDescription="Sort by Active"> Active</th>
+              <td mat-cell *matCellDef="let degree" class=""> {{ degree.active }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="action">
+              <th mat-header-cell *matHeaderCellDef class="text-center p-0"> Action</th>
+              <td mat-cell *matCellDef="let degree" class="text-center p-0">
+                <button mat-mini-fab class="me-3" matTooltip="View degree Details"  [routerLink]="['/degrees', degree?.id]">
+                  <mat-icon>open_in_new</mat-icon>
+                </button>
+                <button mat-mini-fab class="secondary-button me-3" matTooltip="Edit degree" [routerLink]="['/degrees', degree?.id, 'edit']">
+                  <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-mini-fab class="tertiary-button" matTooltip="Remove degree" (click)="deleteDegree(degree.id)">
+                  <mat-icon>delete_outline</mat-icon>
+                </button>
+
+              </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="degreeColumns" class=""></tr>
+            <tr mat-row *matRowDef="let row; columns: degreeColumns;" class="cell"></tr>
+
+            <tr class="mat-row text-center text-light" *matNoDataRow>
+              <td class="mat-cell p-3" colspan="12">No data matching the filter</td>
+            </tr>
+          </table>
+          <mat-paginator
+            [pageSizeOptions]="[10]"
+            [length]="totalItems"
+            [pageSize]="pageSize"
+            [pageIndex]="pageIndex"
+            showFirstLastButtons></mat-paginator>
+    </div>
+</div>
